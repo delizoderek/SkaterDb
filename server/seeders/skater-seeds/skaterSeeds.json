@@ -1,0 +1,42 @@
+[
+    {
+        "first_name": "Jeron",
+        "last_name": "Wilson",
+        "stance":"regular"
+    },
+    {
+        "first_name": "Rudy",
+        "last_name": "Johnson",
+        "stance":"Regular"
+    },
+    {
+        "first_name": "Tony",
+        "last_name": "Ferguson",
+        "stance":""
+    },
+    {
+        "first_name": "Tim",
+        "last_name": "Gavin",
+        "stance":""
+    },
+    {
+        "first_name": "Sean",
+        "last_name": "Sheffey",
+        "stance":""
+    },
+    {
+        "first_name": "Rick",
+        "last_name": "Howard",
+        "stance":""
+    },
+    {
+        "first_name": "Mike",
+        "last_name": "Carrol",
+        "stance":""
+    },
+    {
+        "first_name": "Eric",
+        "last_name": "Koston",
+        "stance":""
+    }
+]
