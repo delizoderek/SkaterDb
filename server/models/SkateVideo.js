@@ -14,6 +14,12 @@ const skateVideoSchema = new Schema(
             type: String,
             required: true,
         },
+        skaters: [
+            {
+              type: Schema.Types.ObjectId,
+              ref: 'Skater',
+            }
+        ]
     },
 );
 
