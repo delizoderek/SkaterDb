@@ -26,7 +26,7 @@ const skaterSchema = new Schema (
               type: Schema.Types.ObjectId,
               ref: 'SkateVideo',
             }
-          ]
+        ],
     },
 );
 
