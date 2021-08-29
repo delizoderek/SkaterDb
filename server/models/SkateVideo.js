@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-
+const soundtrackSchema = require('./Soundtrack');
 const skateVideoSchema = new Schema(
     {
         title: {
@@ -10,6 +10,10 @@ const skateVideoSchema = new Schema(
             type: Date,
             required: true,
         },
+        videoCover:{
+            type: String,
+            required: false,
+        },
         vidLink:{
             type: String,
             required: true,
@@ -19,7 +23,8 @@ const skateVideoSchema = new Schema(
               type: Schema.Types.ObjectId,
               ref: 'Skater',
             }
-        ]
+        ],
+        soundtrack: [soundtrackSchema]
     },
 );
 
