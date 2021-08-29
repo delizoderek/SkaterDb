@@ -1,35 +1,28 @@
-const { Model, DataTypes } = require("sequelize");
+const { Schema, model } = require('mongoose');
 
-const sequelize = require("../config/connection.js");
-
-class SkateVideo extends Model {}
-
-SkateVideo.init(
+const skateVideoSchema = new Schema(
     {
-        id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            autoIncrement: true,
-            primaryKey: true,
-        },
         title: {
-            type: DataTypes.STRING,
-            allowNull: false,
+            type: String,
+            required: true,
         },
         release_date:{
-            type: DataTypes.DATE,
+            type: Date,
+            required: true,
         },
         vidLink:{
-            type: DataTypes.TEXT,
+            type: String,
+            required: true,
         },
-    },
-    {
-        sequelize,
-        timestamps: false,
-        freezeTableName: true,
-        underscored: true,
-        modelName: "brand",
+        skaters: [
+            {
+              type: Schema.Types.ObjectId,
+              ref: 'Skater',
+            }
+        ]
     },
 );
+
+const SkateVideo = model('SkateVideo', skateVideoSchema);
 
 module.exports = SkateVideo;
