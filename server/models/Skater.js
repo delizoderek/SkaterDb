@@ -19,7 +19,7 @@ const skaterSchema = new Schema (
             type: String,
             enum: ['Regular','Goofy','Both'],
             default: 'Regular',
-            required: true,
+            required: false,
         },
         videos: [
             {
