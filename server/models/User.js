@@ -5,6 +5,10 @@ const bcrypt = require('bcrypt');
 
 const userSchema = new Schema(
   {
+    accountType:{
+      type: String,
+      enum: ["admin","mod","viewer"],
+    },
     username: {
       type: String,
       required: true,
