@@ -1,36 +1,28 @@
-const { Model, DataTypes } = require("sequelize");
+const { Schema, model } = require("mongoose");
 
-const sequelize = require("../config/connection.js");
-
-class Brand extends Model {}
-
-Brand.init(
-  {
-      id: {
-          type: DataTypes.INTEGER,
-          allowNull: false,
-          autoIncrement: true,
-          primaryKey: true,
-      },
-      brand_name:{
-          type: DataTypes.STRING,
-          allowNull: false,
-      },
-      video_id:{
-        type: DataTypes.INTEGER,
-          references: {
-              model: 'video',
-              id: 'id',
-          }
-      }
+const brandSchema = new Schema({
+  brandName: {
+    type: String,
+    required: true,
+    unique: true,
   },
-  {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: "brand",
-  }
-);
+  logo: {
+    type: String,
+  },
+  description: {
+    type: String,
+    required: true,
+    minlength: 1,
+    maxlength: 280,
+  },
+  skateVideos: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "SkateVideo",
+    },
+  ],
+});
+
+const Brand = model("Brand", brandSchema);
 
 module.exports = Brand;
