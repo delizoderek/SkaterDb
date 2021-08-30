@@ -21,6 +21,12 @@ const skaterSchema = new Schema (
             default: 'Regular',
             required: true,
         },
+        videos: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: "SkateVideo",
+            }
+        ]
     },
 );
 

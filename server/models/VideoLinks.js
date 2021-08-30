@@ -1,33 +1,16 @@
-const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
-const sequelize = require('../config/connection');
+const { Schema } = require('mongoose');
 
-class User extends Model {
-    checkPassword(loginPw) {
-        return bcrypt.compareSync(loginPw, this.password);
-    }
-}
-
-User.init(
+const vidLinkSchema = new Schema(
     {
-        id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true,
+        linkTitle:{
+            type: String,
+            required: false,
         },
-        link: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-    },
-    {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'user',
+        link:{
+            type: String,
+            required: true,
+        }
     }
 );
 
-module.exports = User;
+module.exports = vidLinkSchema;

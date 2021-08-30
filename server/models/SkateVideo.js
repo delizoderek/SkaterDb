@@ -1,33 +1,33 @@
-const { Schema, model } = require('mongoose');
-const soundtrackSchema = require('./Soundtrack');
-const skateVideoSchema = new Schema(
+const { Schema, model } = require("mongoose");
+const soundtrackSchema = require("./Soundtrack");
+const videoLinkSchema = require("./VideoLinks");
+const skateVideoSchema = new Schema({
+  title: {
+    type: String,
+    required: true,
+  },
+  release_date: {
+    type: Date,
+    required: true,
+  },
+  videoCover: {
+    type: String,
+    required: false,
+  },
+  brand: {
+    type: Schema.Types.ObjectId,
+    ref: "Brand",
+  },
+  skaters: [
     {
-        title: {
-            type: String,
-            required: true,
-        },
-        release_date:{
-            type: Date,
-            required: true,
-        },
-        videoCover:{
-            type: String,
-            required: false,
-        },
-        vidLink:{
-            type: String,
-            required: true,
-        },
-        skaters: [
-            {
-              type: Schema.Types.ObjectId,
-              ref: 'Skater',
-            }
-        ],
-        soundtrack: [soundtrackSchema]
+      type: Schema.Types.ObjectId,
+      ref: "Skater",
     },
-);
+  ],
+  vidLink: [videoLinkSchema],
+  soundtrack: [soundtrackSchema],
+});
 
-const SkateVideo = model('SkateVideo', skateVideoSchema);
+const SkateVideo = model("SkateVideo", skateVideoSchema);
 
 module.exports = SkateVideo;
