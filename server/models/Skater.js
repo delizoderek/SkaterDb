@@ -17,9 +17,9 @@ const skaterSchema = new Schema (
         },
         stance: {
             type: String,
-            enum: ['Regular','Goofy','Both'],
-            default: 'Regular',
-            required: true,
+            enum: ['Regular','Goofy','Both','Unknown'],
+            default: 'Unknown',
+            required: false,
         },
         videos: [
             {
