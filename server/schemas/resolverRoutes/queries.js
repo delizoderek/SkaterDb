@@ -21,19 +21,8 @@ const Query = {
   skater: async (parent, { _id }) => {
     return await Skater.findById(_id);
   },
-  skateVideos: async (parent, { skater, name }) => {
-    const params = {};
-    
-    if (skater) {
-      params.skater = skater
-    }
-
-    if (name) {
-      params.name = {
-        $regex: name
-      }
-    }
-    return await SkateVideo.find(params).populate('skaters')
+  skateVideos: async () => {
+    return await SkateVideo.find().populate('skaters')
   },
   skateVideo: async (parent, { _id }) => {
     return await SkateVideo.findByID(_id).populate('skaters')

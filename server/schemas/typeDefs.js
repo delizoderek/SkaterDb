@@ -50,7 +50,7 @@ const typeDefs = gql`
     me: User
     skaters: [Skater]
     # Query multiple skate videos given a skater id and name
-    skateVideos (skater: ID, name:String):[SkateVideo]
+    skateVideos:[SkateVideo]
     skateVideo (_id: ID!):SkateVideo
     brand(_id:ID!): Brand
     brands:[Brand]
