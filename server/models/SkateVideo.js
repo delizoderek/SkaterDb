@@ -14,10 +14,10 @@ const skateVideoSchema = new Schema({
     type: String,
     required: false,
   },
-  brand: {
+  brands: [{
     type: Schema.Types.ObjectId,
     ref: "Brand",
-  },
+  }],
   skaters: [
     {
       type: Schema.Types.ObjectId,
