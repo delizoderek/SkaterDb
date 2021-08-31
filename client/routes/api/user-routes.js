@@ -1,12 +1,12 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-router-dom";
 
-const routes [
+const routes= [
     {
         path: "/Home",
         component: Home,
@@ -27,7 +27,7 @@ const routes [
         path: "/SearchSkater",
         component: SearchSkater,
     },
-]
+];
 
 // import middleware
 const { authMiddleware } = require('../../utils/auth');
