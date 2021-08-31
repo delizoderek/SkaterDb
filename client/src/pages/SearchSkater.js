@@ -5,7 +5,7 @@ import Auth from '../utils/auth';
 import { useMutation } from '@apollo/client';
 // import { saveSkaterIds, getFavoriteSkaters } from '../utils/localStorage'; Use local storage if we need to
 
-const SearchBooks = () => {
+const SearchSkater = () => {
   // create state for holding returned google api data
   // Needs to be changed for searching skaters
   const [searchedBooks, setSearchedBooks] = useState([]);
@@ -129,4 +129,4 @@ const SearchBooks = () => {
   );
 };
 
-export default SearchBooks;
+export default SearchSkater;
