@@ -1,0 +1,141 @@
+[
+  {
+    "brandName": "Chocolate Skateboards",
+    "logo": "",
+    "description": "",
+    "skateVideos": [
+      "Paco",
+      "Chocolate Tour",
+      "Se Habla Canuck",
+      "Hot Chocolate",
+      "T.O.N.Y. Tour",
+      "Harsh Barge",
+      "Yeah Right!",
+      "We're OK EurOK",
+      "Pretty Sweet",
+      "Pretty Sweet US Tour",
+      "Trunk Boyz in Puerto Rico",
+      "Going Dumb Up the 101",
+      "Girl & Chocolate in Mexico",
+      "Chickity China",
+      "Doll",
+      "Doll 2.0"
+    ]
+  },
+  {
+    "brandName": "Girl Skateboards",
+    "logo": "",
+    "description": "",
+    "skateVideos": [
+      "Goldfish",
+      "Mouse",
+      "Girl South Africa",
+      "Harsh Euro Barge",
+      "Oi! Meets Girl!",
+      "What Tour",
+      "Yes We Canada",
+      "Yanks on Planks",
+      "Girl Outbackwards Tour",
+      "Girl Skates Washington State",
+      "When Nature Calls",
+      "Out for a Rip",
+      "Bangers & Mash",
+      "Harsh Barge",
+      "Yeah Right!",
+      "We're OK EurOK",
+      "Beauty and the Beast",
+      "Beauty and the Beast 2",
+      "Pretty Sweet",
+      "Pretty Sweet US Tour",
+      "Trunk Boyz in Puerto Rico",
+      "Going Dumb Up the 101",
+      "Girl & Chocolate in Mexico",
+      "Chickity China",
+      "Doll",
+      "Doll 2.0"
+    ]
+  },
+  {
+    "brandName": "Antihero Skateboards",
+    "logo": "",
+    "description": "",
+    "skateVideos": ["Beauty and the Beast", "Beauty and the Beast 2"]
+  },
+  {
+    "brandName": "Almost",
+    "logo": "",
+    "description": "",
+    "skateVideos": ["Almost: Round Three", "Cheese and Crackers", "5-Incher"]
+  },
+  {
+    "brandName": "Baker",
+    "logo": "",
+    "description": "",
+    "skateVideos": ["Bootleg", "2G", "Baker 4"]
+  },
+  {
+    "brandName": "Lakai",
+    "logo": "",
+    "description": "",
+    "skateVideos": [
+      "Beware of the Flare",
+      "The Red Flare Tour",
+      "Fully Flared",
+      "The Final Flare!",
+      "Voltage",
+      "Lost & Lakai’d"
+    ]
+  },
+  {
+    "brandName": "Maple",
+    "logo": "",
+    "description": "",
+    "skateVideos": ["Rites of Passage", "Seven Steps to Heaven"]
+  },
+  {
+    "brandName": "Matix",
+    "logo": "",
+    "description": "",
+    "skateVideos": [
+      "Grateful Shred Tour",
+      "Forgotten Coast Tour",
+      "Ams Going Green Tour"
+    ]
+  },
+  {
+    "brandName": "Toy Machine",
+    "logo": "",
+    "description": "",
+    "skateVideos": ["Welcome to Hell", "Jump Off a Building"]
+  },
+  {
+    "brandName": "Independent",
+    "logo": "",
+    "description": "",
+    "skateVideos": ["Japan Tour", "30th Anniversary Tour", "Euro Tour"]
+  },
+  {
+    "brandName": "Globe",
+    "logo": "",
+    "description": "",
+    "skateVideos": ["United By Fate", "The Global Assault"]
+  },
+  {
+    "brandName": "éS",
+    "logo": "",
+    "description": "",
+    "skateVideos": ["Menikmati", "Germany Tour 2002", "Europe Tour 2003"]
+  },
+  {
+    "brandName": "Etnies",
+    "logo": "",
+    "description": "",
+    "skateVideos": ["High 5"]
+  },
+  {
+    "brandName": "Element",
+    "logo": "",
+    "description": "",
+    "skateVideos": ["This is My Element"]
+  }
+]
