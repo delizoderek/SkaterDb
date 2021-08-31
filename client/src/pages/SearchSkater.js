@@ -8,7 +8,7 @@ import { useMutation } from '@apollo/client';
 const SearchSkater = () => {
   // create state for holding returned google api data
   // Needs to be changed for searching skaters
-  const [searchedBooks, setSearchedBooks] = useState([]);
+  const [searchedSkater, setSearchedSkater] = useState([]);
   // create state for holding our search field data
   const [searchInput, setSearchInput] = useState('');
 
@@ -21,7 +21,7 @@ const SearchSkater = () => {
   //   return () => saveBookIds(savedBookIds);
   // });
 
-  // create method to search for books and set state on form submit
+  // create method to search for Skater and set state on form submit
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
@@ -38,9 +38,9 @@ const SearchSkater = () => {
   };
 
   // create function to handle saving a book to our database
-  const handleSaveBook = async (bookId) => {
-    // find the book in `searchedBooks` state by the matching id
-    const bookToSave = searchedBooks.find((book) => book.bookId === bookId);
+  const handleSaveSkater = async (skaterId) => {
+    // find the book in `searchedSkater` state by the matching id
+    const skaterToSave = searchedSkater.find((skater) => skater.skaterId === skaterId);
     // get token
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
@@ -51,7 +51,7 @@ const SearchSkater = () => {
 
 
     try {
-      console.log(bookToSave);
+      console.log(skaterToSave);
       // const response = await saveBook(bookToSave, token);
 
       // if (!response.ok) {
@@ -69,7 +69,7 @@ const SearchSkater = () => {
     <>
       <Jumbotron fluid className='text-light bg-dark'>
         <Container>
-          <h1>Search for Books!</h1>
+          <h1>Search for Skater!</h1>
           <Form onSubmit={handleFormSubmit}>
             <Form.Row>
               <Col xs={12} md={8}>
@@ -79,7 +79,7 @@ const SearchSkater = () => {
                   onChange={(e) => setSearchInput(e.target.value)}
                   type='text'
                   size='lg'
-                  placeholder='Search for a book'
+                  placeholder='Search for a skater'
                 />
               </Col>
               <Col xs={12} md={4}>
@@ -94,29 +94,29 @@ const SearchSkater = () => {
 
       <Container>
         <h2>
-          {searchedBooks.length
-            ? `Viewing ${searchedBooks.length} results:`
-            : 'Search for a book to begin'}
+          {searchedSkater.length
+            ? `Viewing ${searchedSkater.length} results:`
+            : 'Search for a skater'}
         </h2>
         <CardColumns>
-          {searchedBooks.map((book) => {
+          {searchedSkater.map((skater) => {
             return (
-              <Card key={book.bookId} border='dark'>
-                {book.image ? (
-                  <Card.Img src={book.image} alt={`The cover for ${book.title}`} variant='top' />
+              <Card key={skater.skaterId} border='dark'>
+                {skater.image ? (
+                  <Card.Img src={skater.image} alt={`The cover for ${skater.title}`} variant='top' />
                 ) : null}
                 <Card.Body>
-                  <Card.Title>{book.title}</Card.Title>
-                  <p className='small'>Authors: {book.authors}</p>
-                  <Card.Text>{book.description}</Card.Text>
+                  <Card.Title>{skater.title}</Card.Title>
+                  <p className='small'>Authors: {skater.authors}</p>
+                  <Card.Text>{skater.description}</Card.Text>
                   {Auth.loggedIn() && (
                     <Button
-                      // disabled={savedBookIds?.some((savedBookId) => savedBookId === book.bookId)}
+                      // disabled={savedskaterIds?.some((savedskaterId) => savedskaterId === skater.skaterId)}
                       className='btn-block btn-info'
-                      onClick={() => handleSaveBook(book.bookId)}>
-                      {/* {savedBookIds?.some((savedBookId) => savedBookId === book.bookId)
-                        ? 'This book has already been saved!'
-                        : 'Save this Book!'} */}
+                      onClick={() => handleSaveSkater(skater.skaterId)}>
+                      {/* {savedskaterIds?.some((savedskaterId) => savedskaterId === skater.skaterId)
+                        ? 'This skater has already been saved!'
+                        : 'Save this skater!'} */}
                     </Button>
                   )}
                 </Card.Body>
