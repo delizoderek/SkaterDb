@@ -5,23 +5,23 @@ const typeDefs = gql`
   type Skater {
     _id:ID!
     pronouns: String
-    firstName: String
-    lastName: String
+    firstName: String!
+    lastName: String!
     stance: StanceEnum
 
   }
 
   type SkateVideo {
     _id:ID!
-    title: String
-    release_date: Date
-    vidLink: String!
+    title: String!
+    release_date: String
+    vidLink: String
     skaters: [Skater]
   }
 
   type Brand {
     _id:ID!
-    brandName: String
+    brandName: String!
     skateVideos: [SkateVideo]
 
   }
@@ -42,6 +42,7 @@ const typeDefs = gql`
     Regular
     Goofy
     Both
+    Unkown
   }
 
   type Query {
