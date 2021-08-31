@@ -1,7 +1,8 @@
 [
   {
     "pronouns": "",
-    "name": "Mike York",
+    "firstName": "Mike",
+    "lastName": "York",
     "stance": "",
     "videos": [
       "Paco",
@@ -13,7 +14,8 @@
   },
   {
     "pronouns": "",
-    "name": "Chico Brenes",
+    "firstName": "Chico",
+    "lastName": "Brenes",
     "stance": "",
     "videos": [
       "Paco",
@@ -25,49 +27,80 @@
   },
   {
     "pronouns": "",
-    "name": "Richard Mulder",
+    "firstName": "Richard",
+    "lastName": "Mulder",
     "stance": "",
-    "videos": ["Paco", "Mouse", "Chocolate Tour"]
+    "videos": [
+      "Paco",
+      "Mouse",
+      "Chocolate Tour"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Shamil Randle",
+    "firstName": "Shamil",
+    "lastName": "Randle",
     "stance": "",
-    "videos": ["Paco"]
+    "videos": [
+      "Paco"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Ben Sanchez",
+    "firstName": "Ben",
+    "lastName": "Sanchez",
     "stance": "",
-    "videos": ["Paco", "Mouse"]
+    "videos": [
+      "Paco",
+      "Mouse"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Daniel Castillo",
+    "firstName": "Daniel",
+    "lastName": "Castillo",
     "stance": "",
-    "videos": ["Paco", "Chocolate Tour", "Pretty Sweet"]
+    "videos": [
+      "Paco",
+      "Chocolate Tour",
+      "Pretty Sweet"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Keenan Milton",
+    "firstName": "Keenan",
+    "lastName": "Milton",
     "stance": "",
-    "videos": ["Paco", "Mouse", "Chocolate Tour", "Yeah Right!"]
+    "videos": [
+      "Paco",
+      "Mouse",
+      "Chocolate Tour",
+      "Yeah Right!"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Paulo Diaz",
+    "firstName": "Paulo",
+    "lastName": "Diaz",
     "stance": "",
-    "videos": ["Paco", "Chocolate Tour"]
+    "videos": [
+      "Paco",
+      "Chocolate Tour"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Gabriela Rodriguez",
+    "firstName": "Gabriela",
+    "lastName": "Rodriguez",
     "stance": "",
-    "videos": ["Paco"]
+    "videos": [
+      "Paco"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Jeron Wilson",
+    "firstName": "Jeron",
+    "lastName": "Wilson",
     "stance": "",
     "videos": [
       "Goldfish",
@@ -82,31 +115,48 @@
   },
   {
     "pronouns": "",
-    "name": "Rudy Johnson",
+    "firstName": "Rudy",
+    "lastName": "Johnson",
     "stance": "",
-    "videos": ["Goldfish"]
+    "videos": [
+      "Goldfish"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Tony Ferguson",
+    "firstName": "Tony",
+    "lastName": "Ferguson",
     "stance": "",
-    "videos": ["Goldfish", "Mouse", "Chocolate Tour"]
+    "videos": [
+      "Goldfish",
+      "Mouse",
+      "Chocolate Tour"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Tim Gavin",
+    "firstName": "Tim",
+    "lastName": "Gavin",
     "stance": "",
-    "videos": ["Goldfish", "Chocolate Tour"]
+    "videos": [
+      "Goldfish",
+      "Chocolate Tour"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Sean Sheffey",
+    "firstName": "Sean",
+    "lastName": "Sheffey",
     "stance": "",
-    "videos": ["Goldfish", "Mouse"]
+    "videos": [
+      "Goldfish",
+      "Mouse"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Rick Howard",
+    "firstName": "Rick",
+    "lastName": "Howard",
     "stance": "",
     "videos": [
       "Goldfish",
@@ -130,7 +180,8 @@
   },
   {
     "pronouns": "",
-    "name": "Mike Carroll",
+    "firstName": "Mike",
+    "lastName": "Carroll",
     "stance": "",
     "videos": [
       "Goldfish",
@@ -157,7 +208,8 @@
   },
   {
     "pronouns": "",
-    "name": "Eric Koston",
+    "firstName": "Eric",
+    "lastName": "Koston",
     "stance": "",
     "videos": [
       "Goldfish",
@@ -185,7 +237,8 @@
   },
   {
     "pronouns": "",
-    "name": "Gino Ianucci",
+    "firstName": "Gino",
+    "lastName": "Ianucci",
     "stance": "",
     "videos": [
       "Mouse",
@@ -198,13 +251,19 @@
   },
   {
     "pronouns": "",
-    "name": "Guy Mariano",
+    "firstName": "Guy",
+    "lastName": "Mariano",
     "stance": "",
-    "videos": ["Mouse", "Pretty Sweet", "Pretty Sweet US Tour"]
+    "videos": [
+      "Mouse",
+      "Pretty Sweet",
+      "Pretty Sweet US Tour"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Chris Roberts",
+    "firstName": "Chris",
+    "lastName": "Roberts",
     "stance": "",
     "videos": [
       "Chocolate Tour",
@@ -216,31 +275,49 @@
   },
   {
     "pronouns": "",
-    "name": "Robbie McKinley",
+    "firstName": "Robbie",
+    "lastName": "McKinley",
     "stance": "",
-    "videos": ["Chocolate Tour", "Harsh Euro Barge", "Yeah Right!"]
+    "videos": [
+      "Chocolate Tour",
+      "Harsh Euro Barge",
+      "Yeah Right!"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Scott Johnston",
+    "firstName": "Scott",
+    "lastName": "Johnston",
     "stance": "",
-    "videos": ["Chocolate Tour", "Harsh Barge", "Se Habla Canuck"]
+    "videos": [
+      "Chocolate Tour",
+      "Harsh Barge",
+      "Se Habla Canuck"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Colin McKay",
+    "firstName": "Colin",
+    "lastName": "McKay",
     "stance": "",
-    "videos": ["Chocolate Tour"]
+    "videos": [
+      "Chocolate Tour"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Stevie Williams",
+    "firstName": "Stevie",
+    "lastName": "Williams",
     "stance": "",
-    "videos": ["Chocolate Tour", "Harsh Barge"]
+    "videos": [
+      "Chocolate Tour",
+      "Harsh Barge"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Rick McCrank",
+    "firstName": "Rick",
+    "lastName": "McCrank",
     "stance": "",
     "videos": [
       "Girl South Africa",
@@ -265,7 +342,8 @@
   },
   {
     "pronouns": "",
-    "name": "Brian Anderson",
+    "firstName": "Brian",
+    "lastName": "Anderson",
     "stance": "",
     "videos": [
       "Harsh Barge",
@@ -283,7 +361,8 @@
   },
   {
     "pronouns": "",
-    "name": "Jereme Rogers",
+    "firstName": "Jereme",
+    "lastName": "Rogers",
     "stance": "",
     "videos": [
       "Harsh Barge",
@@ -295,13 +374,17 @@
   },
   {
     "pronouns": "",
-    "name": "Ricardo Carvalho",
+    "firstName": "Ricardo",
+    "lastName": "Carvalho",
     "stance": "",
-    "videos": ["Harsh Barge"]
+    "videos": [
+      "Harsh Barge"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Brandon Biebel",
+    "firstName": "Brandon",
+    "lastName": "Biebel",
     "stance": "",
     "videos": [
       "Harsh Barge",
@@ -320,7 +403,8 @@
   },
   {
     "pronouns": "",
-    "name": "Marc Johnson",
+    "firstName": "Marc",
+    "lastName": "Johnson",
     "stance": "",
     "videos": [
       "Yeah Right!",
@@ -344,7 +428,8 @@
   },
   {
     "pronouns": "",
-    "name": "Justin Eldridge",
+    "firstName": "Justin",
+    "lastName": "Eldridge",
     "stance": "",
     "videos": [
       "Yeah Right!",
@@ -358,19 +443,26 @@
   },
   {
     "pronouns": "",
-    "name": "Owen Wilson",
+    "firstName": "Owen",
+    "lastName": "Wilson",
     "stance": "",
-    "videos": ["Yeah Right!"]
+    "videos": [
+      "Yeah Right!"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Paul Rodriguez",
+    "firstName": "Paul",
+    "lastName": "Rodriguez",
     "stance": "",
-    "videos": ["Yeah Right!"]
+    "videos": [
+      "Yeah Right!"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Kenny Anderson",
+    "firstName": "Kenny",
+    "lastName": "Anderson",
     "stance": "",
     "videos": [
       "Se Habla Canuck",
@@ -382,13 +474,19 @@
   },
   {
     "pronouns": "",
-    "name": "Devine Calloway",
+    "firstName": "Devine",
+    "lastName": "Calloway",
     "stance": "",
-    "videos": ["Se Habla Canuck", "What Tour", "We're OK EurOK"]
+    "videos": [
+      "Se Habla Canuck",
+      "What Tour",
+      "We're OK EurOK"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Sean Malto",
+    "firstName": "Sean",
+    "lastName": "Malto",
     "stance": "",
     "videos": [
       "Yes We Canada",
@@ -411,7 +509,8 @@
   },
   {
     "pronouns": "",
-    "name": "Mike Mo Capaldi",
+    "firstName": "Mike Mo",
+    "lastName": "Capaldi",
     "stance": "",
     "videos": [
       "Yes We Canada",
@@ -428,49 +527,78 @@
   },
   {
     "pronouns": "",
-    "name": "Jesus Fernandez",
+    "firstName": "Jesus",
+    "lastName": "Fernandez",
     "stance": "",
-    "videos": ["We're OK EurOK", "Pretty Sweet"]
+    "videos": [
+      "We're OK EurOK",
+      "Pretty Sweet"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Frank Gerwer",
+    "firstName": "Frank",
+    "lastName": "Gerwer",
     "stance": "",
-    "videos": ["Beauty and the Beast", "Beauty and the Beast 2"]
+    "videos": [
+      "Beauty and the Beast",
+      "Beauty and the Beast 2"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Peter Hewitt",
+    "firstName": "Peter",
+    "lastName": "Hewitt",
     "stance": "",
-    "videos": ["Beauty and the Beast", "Beauty and the Beast 2"]
+    "videos": [
+      "Beauty and the Beast",
+      "Beauty and the Beast 2"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Julien Stranger",
+    "firstName": "Julien",
+    "lastName": "Stranger",
     "stance": "",
-    "videos": ["Beauty and the Beast", "Beauty and the Beast 2"]
+    "videos": [
+      "Beauty and the Beast",
+      "Beauty and the Beast 2"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Max Schaaf",
+    "firstName": "Max",
+    "lastName": "Schaaf",
     "stance": "",
-    "videos": ["Beauty and the Beast", "Beauty and the Beast 2"]
+    "videos": [
+      "Beauty and the Beast",
+      "Beauty and the Beast 2"
+    ]
   },
   {
     "pronouns": "",
-    "name": "John Cardiel",
+    "firstName": "John",
+    "lastName": "Cardiel",
     "stance": "",
-    "videos": ["Beauty and the Beast", "Beauty and the Beast 2"]
+    "videos": [
+      "Beauty and the Beast",
+      "Beauty and the Beast 2"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Andrew Allen",
+    "firstName": "Andrew",
+    "lastName": "Allen",
     "stance": "",
-    "videos": ["Beauty and the Beast", "Beauty and the Beast 2"]
+    "videos": [
+      "Beauty and the Beast",
+      "Beauty and the Beast 2"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Alex Olson",
+    "firstName": "Alex",
+    "lastName": "Olson",
     "stance": "",
     "videos": [
       "Beauty and the Beast",
@@ -482,37 +610,54 @@
   },
   {
     "pronouns": "",
-    "name": "Tony Trujillo",
+    "firstName": "Tony",
+    "lastName": "Trujillo",
     "stance": "",
-    "videos": ["Beauty and the Beast", "Beauty and the Beast 2"]
+    "videos": [
+      "Beauty and the Beast",
+      "Beauty and the Beast 2"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Brad Staba",
+    "firstName": "Brad",
+    "lastName": "Staba",
     "stance": "",
-    "videos": ["Yanks on Planks"]
+    "videos": [
+      "Yanks on Planks"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Tom Remillard",
+    "firstName": "Tom",
+    "lastName": "Remillard",
     "stance": "",
-    "videos": ["Beauty and the Beast 2"]
+    "videos": [
+      "Beauty and the Beast 2"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Tony Miorana",
+    "firstName": "Tony",
+    "lastName": "Miorana",
     "stance": "",
-    "videos": ["Beauty and the Beast 2"]
+    "videos": [
+      "Beauty and the Beast 2"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Chris Pfanner",
+    "firstName": "Chris",
+    "lastName": "Pfanner",
     "stance": "",
-    "videos": ["Beauty and the Beast 2"]
+    "videos": [
+      "Beauty and the Beast 2"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Vincent Alvarez",
+    "firstName": "Vincent",
+    "lastName": "Alvarez",
     "stance": "",
     "videos": [
       "Beauty and the Beast 2",
@@ -525,13 +670,17 @@
   },
   {
     "pronouns": "",
-    "name": "Robbie Russo",
+    "firstName": "Robbie",
+    "lastName": "Russo",
     "stance": "",
-    "videos": ["Beauty and the Beast 2"]
+    "videos": [
+      "Beauty and the Beast 2"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Elijah Berle",
+    "firstName": "Elijah",
+    "lastName": "Berle",
     "stance": "",
     "videos": [
       "Pretty Sweet",
@@ -543,7 +692,8 @@
   },
   {
     "pronouns": "",
-    "name": "Raven Tershy",
+    "firstName": "Raven",
+    "lastName": "Tershy",
     "stance": "",
     "videos": [
       "Pretty Sweet",
@@ -554,7 +704,8 @@
   },
   {
     "pronouns": "",
-    "name": "Stevie Perez",
+    "firstName": "Stevie",
+    "lastName": "Perez",
     "stance": "",
     "videos": [
       "Pretty Sweet",
@@ -568,7 +719,8 @@
   },
   {
     "pronouns": "",
-    "name": "Cory Kennedy",
+    "firstName": "Cory",
+    "lastName": "Kennedy",
     "stance": "",
     "videos": [
       "Pretty Sweet",
@@ -582,31 +734,44 @@
   },
   {
     "pronouns": "",
-    "name": "Aidan Campbell",
+    "firstName": "Aidan",
+    "lastName": "Campbell",
     "stance": "",
-    "videos": ["Pretty Sweet US Tour"]
+    "videos": [
+      "Pretty Sweet US Tour"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Jerry Hsu",
+    "firstName": "Jerry",
+    "lastName": "Hsu",
     "stance": "",
-    "videos": ["Going Dumb Up the 101"]
+    "videos": [
+      "Going Dumb Up the 101"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Johnny Jones",
+    "firstName": "Johnny",
+    "lastName": "Jones",
     "stance": "",
-    "videos": ["Going Dumb Up the 101"]
+    "videos": [
+      "Going Dumb Up the 101"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Aramis Hudson",
+    "firstName": "Aramis",
+    "lastName": "Hudson",
     "stance": "",
-    "videos": ["Girl & Chocolate in Mexico"]
+    "videos": [
+      "Girl & Chocolate in Mexico"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Tyler Pacheco",
+    "firstName": "Tyler",
+    "lastName": "Pacheco",
     "stance": "",
     "videos": [
       "Girl & Chocolate in Mexico",
@@ -620,7 +785,8 @@
   },
   {
     "pronouns": "",
-    "name": "Simon Bannerot",
+    "firstName": "Simon",
+    "lastName": "Bannerot",
     "stance": "",
     "videos": [
       "Girl Skates Washington State",
@@ -633,7 +799,8 @@
   },
   {
     "pronouns": "",
-    "name": "Andrew Brophy",
+    "firstName": "Andrew",
+    "lastName": "Brophy",
     "stance": "",
     "videos": [
       "When Nature Calls",
@@ -645,91 +812,139 @@
   },
   {
     "pronouns": "",
-    "name": "Niels Bennett",
+    "firstName": "Niels",
+    "lastName": "Bennett",
     "stance": "",
-    "videos": ["Out for a Rip", "Doll", "Bangers & Mash", "Doll 2.0"]
+    "videos": [
+      "Out for a Rip",
+      "Doll",
+      "Bangers & Mash",
+      "Doll 2.0"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Breana Geering",
+    "firstName": "Breana",
+    "lastName": "Geering",
     "stance": "",
-    "videos": ["Out for a Rip"]
+    "videos": [
+      "Out for a Rip"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Griffin Gass",
+    "firstName": "Griffin",
+    "lastName": "Gass",
     "stance": "",
-    "videos": ["Out for a Rip", "Doll", "Doll 2.0"]
+    "videos": [
+      "Out for a Rip",
+      "Doll",
+      "Doll 2.0"
+    ]
   },
   {
     "pronouns": "",
-    "name": "James Capps",
+    "firstName": "James",
+    "lastName": "Capps",
     "stance": "",
-    "videos": ["T.O.N.Y. Tour"]
+    "videos": [
+      "T.O.N.Y. Tour"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Yonnie Cruz",
+    "firstName": "Yonnie",
+    "lastName": "Cruz",
     "stance": "",
-    "videos": ["T.O.N.Y. Tour"]
+    "videos": [
+      "T.O.N.Y. Tour"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Hakeem Ducksworth",
+    "firstName": "Hakeem",
+    "lastName": "Ducksworth",
     "stance": "",
-    "videos": ["T.O.N.Y. Tour"]
+    "videos": [
+      "T.O.N.Y. Tour"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Carl Aikens",
+    "firstName": "Carl",
+    "lastName": "Aikens",
     "stance": "",
-    "videos": ["T.O.N.Y. Tour"]
+    "videos": [
+      "T.O.N.Y. Tour"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Giorgio Villone",
+    "firstName": "Giorgio",
+    "lastName": "Villone",
     "stance": "",
-    "videos": ["T.O.N.Y. Tour"]
+    "videos": [
+      "T.O.N.Y. Tour"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Greg Lutzka",
+    "firstName": "Greg",
+    "lastName": "Lutzka",
     "stance": "",
-    "videos": ["Almost: Round Three"]
+    "videos": [
+      "Almost: Round Three"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Cooper Wilt",
+    "firstName": "Cooper",
+    "lastName": "Wilt",
     "stance": "",
-    "videos": ["Almost: Round Three"]
+    "videos": [
+      "Almost: Round Three"
+    ]
   },
   {
     "pronouns": "",
-    "name": "William Patrick",
+    "firstName": "William",
+    "lastName": "Patrick",
     "stance": "",
-    "videos": ["Almost: Round Three"]
+    "videos": [
+      "Almost: Round Three"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Rodney Mullen",
+    "firstName": "Rodney",
+    "lastName": "Mullen",
     "stance": "",
-    "videos": ["Almost: Round Three"]
+    "videos": [
+      "Almost: Round Three"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Daewon Song",
+    "firstName": "Daewon",
+    "lastName": "Song",
     "stance": "",
-    "videos": ["Almost: Round Three"]
+    "videos": [
+      "Almost: Round Three"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Ryan Sheckler",
+    "firstName": "Ryan",
+    "lastName": "Sheckler",
     "stance": "",
-    "videos": ["Almost: Round Three"]
+    "videos": [
+      "Almost: Round Three"
+    ]
   },
   {
     "pronouns": "",
-    "name": "Chris Haslam",
+    "firstName": "Chris",
+    "lastName": "Haslam",
     "stance": "",
     "videos": [
       "Almost: Round Three",
@@ -743,7 +958,8 @@
   },
   {
     "pronouns": "",
-    "name": "Elissa Steamer",
+    "firstName": "Elissa",
+    "lastName": "Steamer",
     "stance": "",
     "videos": [
       "Bootleg",
@@ -755,7 +971,8 @@
   },
   {
     "pronouns": "",
-    "name": "Chad Muska",
+    "firstName": "Chad",
+    "lastName": "Muska",
     "stance": "",
     "videos": [
       "Rites of Passage",

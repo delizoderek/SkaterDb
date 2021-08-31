@@ -8,11 +8,12 @@ const brandSchema = new Schema({
   },
   logo: {
     type: String,
+    default: '',
   },
   description: {
     type: String,
-    required: true,
-    minlength: 1,
+    default: '',
+    minlength: 0,
     maxlength: 280,
   },
   skateVideos: [
