@@ -1,12 +1,13 @@
 // addBrand(brandName:String!,skateVideos:[String]): Brand
 // removeBrand(brandId: ID!): Confirm
 // updateBrand(brandId: ID!, brandName: String, skateVideos: [String]): Brand
-const { Brand, Skater, SkateVideo } = require("../../models");
+const { Brand,SkateVideo } = require("../../../models");
 
 const brandMutations = {
-  addBrand: async (parent, { brandName, skateVideos }, context) => {
-    const queryObj = { brandName };
+  addBrand: async (parent, { brandName, description ,skateVideos }, context) => {
+    const queryObj = { brandName};
     queryObj.skateVideos = skateVideos ? [...skateVideos] : [];
+    queryObj.description = description ? description:"";
     try {
       const newBrand = await Brand.create(queryObj);
       for (let vidId of skateVideos) {
@@ -39,23 +40,20 @@ const brandMutations = {
     }
   },
 
-  updateBrand: async (parent, { brandId, brandName, skateVideos }, context) => {
+  updateBrand: async (parent, { brandId, brandName, description, skateVideos }, context) => {
     try {
       const queryObj = {};
-      if (brandName || skateVideos) {
-        if (brandName) {
-          queryObj.brandName = brandName;
-        }
+      if (brandName || description || skateVideos) {
+        queryObj.brandName = brandName ? brandName : "";
+        queryObj.description = description ? description : "";
+        queryObj.skateVideos = skateVideos ? [...skateVideos] : [];
 
-        if (skateVideos) {
-          queryObj.skateVideos = skateVideos;
-        }
         const updatedBrand = await Brand.findByIdAndUpdate(
           { _id: brandId },
           queryObj
         );
 
-        for (let vidUp of skateVideos) {
+        for (let vidUp of queryObj.skateVideos) {
           // By using add to set we can ensure duplicate brands will not be added
           await SkateVideo.findByIdAndUpdate(
             { _id: vidUp },

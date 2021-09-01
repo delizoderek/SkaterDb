@@ -49,6 +49,14 @@ const typeDefs = gql`
     Unknown
   }
 
+  input Skater{
+    firstName: String!
+    lastName: String!
+    pronouns: String
+    stance: String
+    videos: [String]
+  }
+
   type Query {
     # Because we have the context functionality in place to check a JWT and decode its data, we can use a query that will always find and return the logged in user's data
     me: User
@@ -70,10 +78,10 @@ const typeDefs = gql`
     removeBrand(brandId: ID!): Confirm
     updateBrand(brandId: ID!, brandName: String, skateVideos: [String]): Confirm
 
-    # # Skater Mutations
-    # addSkater(): Skater
-    # removeSkater(): Confirm
-    # updateSkater(): Skater
+    # Skater Mutations
+    addSkater(): Skater
+    removeSkater(): Confirm
+    updateSkater(): Skater
 
     # # Video Mutations
     # addVideo(): SkateVideo
