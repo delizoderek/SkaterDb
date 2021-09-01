@@ -153,6 +153,7 @@ db.once("open", async () => {
       videoCover: video.videoCover,
       brands: brandIds,
       skaters: skaterIds,
+      vidLink: video.vidLink[0],
     }
   });
   await SkateVideo.create(newVideoSeeds);

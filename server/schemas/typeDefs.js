@@ -8,7 +8,7 @@ const typeDefs = gql`
     firstName: String!
     lastName: String!
     stance: StanceEnum
-
+    videos: [SkateVideo]
   }
 
   type SkateVideo {
@@ -22,8 +22,8 @@ const typeDefs = gql`
   type Brand {
     _id:ID!
     brandName: String!
-    skateVideos: [SkateVideo]
     description: String
+    skateVideos: [SkateVideo]
   }
 
   type User {
@@ -38,11 +38,33 @@ const typeDefs = gql`
     user: User
   }
 
+  type Confirm{
+    success:Boolean!,
+    error: String
+  }
+
   enum StanceEnum {
     Regular
     Goofy
     Both
     Unknown
+  }
+
+  input NewSkater{
+    firstName: String!
+    lastName: String!
+    pronouns: String
+    stance: String
+    videos: [String]
+  }
+
+  # When updating a skater all inputs are optional
+  input SkaterChanges{
+    firstName: String
+    lastName: String
+    pronouns: String
+    stance: String
+    videos: [String]
   }
 
   type Query {
@@ -60,6 +82,21 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
+
+    # Brand Mutations
+    addBrand(brandName:String!,skateVideos:[String]): Brand
+    removeBrand(brandId: ID!): Confirm
+    updateBrand(brandId: ID!, brandName: String, skateVideos: [String]): Confirm
+
+    # Skater Mutations
+    addSkater(input: NewSkater): Skater
+    removeSkater(skaterId: ID!): Confirm
+    updateSkater(skaterId: ID!, input: SkaterChanges): Confirm
+
+    # # Video Mutations
+    # addVideo(): SkateVideo
+    # removeVideo(): Confirm
+    # updateVideo(): SkateVideo
   }
 `;
 

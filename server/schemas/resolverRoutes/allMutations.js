@@ -1,6 +1,8 @@
-const { AuthenticationError } = require('apollo-server-express');
-const { User, Brand, Skater, SkateVideo } = require('../../models');
-const { signToken } = require('../../utils/auth');
+const { AuthenticationError } = require("apollo-server-express");
+const { User, Brand, Skater, SkateVideo } = require("../../models");
+const {addBrand,removeBrand,updateBrand} = require("./mutations/brandMutations");
+const {addSkater,removeSkater,updateSkater} = require("./mutations/skaterMutations");
+const { signToken } = require("../../utils/auth");
 
 const Mutation = {
   addUser: async (parent, { username, email, password }) => {
@@ -28,6 +30,12 @@ const Mutation = {
     const token = signToken(user);
     return { token, user };
   },
+  addBrand,
+  removeBrand,
+  updateBrand,
+  addSkater,
+  removeSkater,
+  updateSkater
 };
 
 module.exports = Mutation;
