@@ -10,7 +10,8 @@ const AppNavbar = () => {
   // set modal display state
   const [showModal, setShowModal] = useState(false);
   const SearchBar = () => (
-    <form action="/" method="get">
+    <div>
+    <form action="/" method="get" className = "searchBar">
         <label htmlFor="header-search">
         </label>
         <input
@@ -21,11 +22,13 @@ const AppNavbar = () => {
         />
         <button type="submit">Search</button>
     </form>
+    </div>
 );
   return (
     <>
-      <Navbar bg='dark' variant='dark' expand='lg'>
-        <Container fluid>
+    <div>
+      <Navbar bg='info' variant='light' expand='lg'>
+        <Container fluid >
           <Navbar.Brand as={Link} to='/'>
             Skater Hx
           </Navbar.Brand>
@@ -37,11 +40,11 @@ const AppNavbar = () => {
                 Contribute
               </Nav.Link>
               
-              {/* if user is logged in show saved books and logout */}
+              {/* if user is logged in show saved skaters and logout */}
               {Auth.loggedIn() ? (
                 <>
                   <Nav.Link as={Link} to='/saved'>
-                    See Your Books
+                    Who's Skatin'?
                   </Nav.Link>
                   <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
                 </>
@@ -84,6 +87,7 @@ const AppNavbar = () => {
           </Modal.Body>
         </Tab.Container>
       </Modal>
+      </div>
     </>
   );
 };

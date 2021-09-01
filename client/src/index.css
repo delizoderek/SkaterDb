@@ -1,5 +1,8 @@
+:root{
+  background-color:#5f27cd;
+}
 body {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Calibri', sans-serif;
 }
 
 h1,
@@ -14,4 +17,20 @@ h6 {
 .small {
   font-weight: 300;
   font-style: italic;
+}
+.searchBar{
+  background-color: #8395a7;
+}
+.navbar{
+  background-color: #5f27cd;
+  
+}
+/* .homePage{
+  background-color: #c8d6e5;
+} */
+#welcomeText{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 1000;
+  font-size: 3rem;
+  text-align: center;
 }

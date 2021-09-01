@@ -28,7 +28,7 @@ function Home() {
 }
 };
   return (
-    <div>
+    <div className= "homePage">
       {/* <Navbar />  */}
       {/* <LoginForm />
       <SignupForm /> */}
