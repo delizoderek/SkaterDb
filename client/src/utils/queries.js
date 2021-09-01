@@ -14,3 +14,14 @@ export const GET_ME = gql`
     }
   }
 `;
+export const GET_SKATERS = gql`
+  query allSkaters {
+    skaters {
+      _id
+      firstName
+      lastName
+      pronouns
+      stance
+    }
+  }
+`;

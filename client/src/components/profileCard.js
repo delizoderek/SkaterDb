@@ -17,10 +17,10 @@ export default function Card(props) {
           alt="Card cap"
         />
         <div className="card-body">
-          <h5 className="card-title">{props.firstName}</h5>
+          <h5 className="card-title">{props.name}</h5>
           <p className="card-text">Pronouns: {props.prounouns} Stance: {props.stance} Total Videos: {props.totalVideos}</p>
           <a href="#" className="btn btn-primary">
-             {props.firstName}
+             {props.name}
           </a>
         </div>
       </div>
