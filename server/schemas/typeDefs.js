@@ -49,6 +49,7 @@ const typeDefs = gql`
     # Because we have the context functionality in place to check a JWT and decode its data, we can use a query that will always find and return the logged in user's data
     me: User
     skaters: [Skater]
+    skater(_id:ID!): Skater
     # Query multiple skate videos given a skater id and name
     skateVideos:[SkateVideo]
     skateVideo (_id: ID!):SkateVideo
