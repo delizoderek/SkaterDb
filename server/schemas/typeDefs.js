@@ -23,7 +23,7 @@ const typeDefs = gql`
     _id:ID!
     brandName: String!
     skateVideos: [SkateVideo]
-
+    description: String
   }
 
   type User {
