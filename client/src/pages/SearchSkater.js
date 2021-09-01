@@ -37,9 +37,9 @@ const SearchSkater = () => {
     }
   };
 
-  // create function to handle saving a book to our database
+  // create function to handle saving a skater to our database
   const handleSaveSkater = async (skaterId) => {
-    // find the book in `searchedSkater` state by the matching id
+    // find the skater in `searchedSkater` state by the matching id
     const skaterToSave = searchedSkater.find((skater) => skater.skaterId === skaterId);
     // get token
     const token = Auth.loggedIn() ? Auth.getToken() : null;
@@ -103,11 +103,11 @@ const SearchSkater = () => {
             return (
               <Card key={skater.skaterId} border='dark'>
                 {skater.image ? (
-                  <Card.Img src={skater.image} alt={`The cover for ${skater.title}`} variant='top' />
+                  <Card.Img src={skater.image} alt={`${skater.firstName}`} variant='top' />
                 ) : null}
                 <Card.Body>
-                  <Card.Title>{skater.title}</Card.Title>
-                  <p className='small'>Authors: {skater.authors}</p>
+                  <Card.Title>{skater.firstName} {skater.lastName}</Card.Title>
+                  {/* <p className='small'>Authors: {skater.authors}</p> */}
                   <Card.Text>{skater.description}</Card.Text>
                   {Auth.loggedIn() && (
                     <Button

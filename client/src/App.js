@@ -42,10 +42,10 @@ function App() {
       <ApolloProvider client={client}>
         <Navbar />
         <Switch>
-          <Route exact path="/" component={Home}/>
           <Route exact path="/search" component={SearchSkater}/>
           <Route exact path="/saved" component={ProfilePage} />
           <Route exact path ="/404"component={WrongPage}/>
+          <Route exact path="/" component={Home}/>
           <Redirect to="/404"  />
         </Switch>
       </ApolloProvider>

@@ -9,20 +9,34 @@ import Auth from '../utils/auth';
 const AppNavbar = () => {
   // set modal display state
   const [showModal, setShowModal] = useState(false);
-
+  const SearchBar = () => (
+    <form action="/" method="get">
+        <label htmlFor="header-search">
+        </label>
+        <input
+            type="text"
+            id="header-search"
+            placeholder="Search Skater Hx"
+            name="s" 
+        />
+        <button type="submit">Search</button>
+    </form>
+);
   return (
     <>
       <Navbar bg='dark' variant='dark' expand='lg'>
         <Container fluid>
           <Navbar.Brand as={Link} to='/'>
-            Google Books Search
+            Skater Hx
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbar' />
+          <SearchBar/> 
           <Navbar.Collapse id='navbar'>
             <Nav className='ml-auto'>
               <Nav.Link as={Link} to='/'>
-                Search For Books
+                Contribute
               </Nav.Link>
+              
               {/* if user is logged in show saved books and logout */}
               {Auth.loggedIn() ? (
                 <>
