@@ -5,12 +5,6 @@ export const GET_ME = gql`
       _id
       username
       email
-      thoughts {
-        _id
-        thoughtText
-        thoughtAuthor
-        createdAt
-      }
     }
   }
 `;
@@ -22,6 +16,40 @@ export const GET_SKATERS = gql`
       lastName
       pronouns
       stance
+    }
+  }
+`;
+
+export const GET_BRANDS = gql`
+  query allBrands {
+    brands {
+      _id
+      brandName
+      description
+      skateVideos {
+        _id
+        vidLink
+        skaters {
+        _id
+        firstName
+        lastName
+        pronouns
+        stance
+        }
+      }
+    }
+  }
+`;
+      
+export const GET_VIDEOS = gql`
+  query allVideos {
+    videos {
+      title
+      releasedate
+      vidLink
+      brand
+      skaters
+      soundtrack
     }
   }
 `;
