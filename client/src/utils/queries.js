@@ -42,14 +42,43 @@ export const GET_BRANDS = gql`
 `;
       
 export const GET_VIDEOS = gql`
-  query allVideos {
-    videos {
+  query allSkateVideos {
+    skateVideos {
       title
-      releasedate
+      releaseDate
       vidLink
       brand
       skaters
-      soundtrack
+      soundTrack
+    }
+  }
+`;
+
+export const GET_SINGLE_SKATER = gql`
+  query getSingleSkater($skaterId: ID!) {
+    skater(skaterId: $skaterId) {
+      _id
+      firstName
+      lastName
+      pronouns
+      stance
+    }
+  }
+`;
+
+export const GET_SINGLE_VIDEO = gql`
+  query getSingleVideo($skateVideo: ID!) {
+    skateVideo(skateVideoId: $skateVideoId) {
+      _id
+      title
+      releaseDate
+      vidLink
+      brand
+      skaters{
+        firstName
+        lastName
+      }
+      soundTrack
     }
   }
 `;

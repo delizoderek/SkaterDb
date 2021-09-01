@@ -11,11 +11,25 @@ const typeDefs = gql`
 
   }
 
+  type SoundTrack {
+    _id:ID
+    segmentTitle: String
+    songTitle: String!
+    artist: String!
+  }
+
+  type VidLink {
+    _id:ID
+    linkTitle: String
+    link: String!
+  }
+
   type SkateVideo {
     _id:ID!
     title: String!
     release_date: String
-    vidLink: String
+    vidLink: VidLink
+    soundTrack: SoundTrack
     skaters: [Skater]
   }
 
