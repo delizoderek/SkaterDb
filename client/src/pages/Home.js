@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { useQuery } from '@apollo/client';
-import Display from '../components/Display'
+import Display, { VideoDisplay } from '../components/Display'
 // import LoginForm from '../components/LoginForm';
 // import Navbar from '../components/Navbar';
 // import SignupForm from '../components/SignupForm';
@@ -28,12 +28,23 @@ function Home() {
 }
 };
   return (
-    <div>
+    <div className= "homePage">
       {/* <Navbar />  */}
       {/* <LoginForm />
       <SignupForm /> */}
       <h1>Welcome to our site </h1>
-      <Display />
+      {/* <Display /> */}
+      <VideoDisplay />
+      <div class="card" className="width: 18rem;">
+  <div class="card-header">
+    Browse by Category
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Video by Brand</li>
+    <li class="list-group-item">Video by Skater</li>
+    <li class="list-group-item">Video by Date</li>
+  </ul>
+</div>
       <Carousel
         swipeable={false}
         draggable={false}
