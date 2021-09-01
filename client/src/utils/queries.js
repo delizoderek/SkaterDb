@@ -19,6 +19,7 @@ export const GET_SKATERS = gql`
     }
   }
 `;
+
 export const GET_BRANDS = gql`
   query allBrands {
     brands {
@@ -36,6 +37,19 @@ export const GET_BRANDS = gql`
         stance
         }
       }
+    }
+  }
+`;
+      
+export const GET_VIDEOS = gql`
+  query allVideos {
+    videos {
+      title
+      releasedate
+      vidLink
+      brand
+      skaters
+      soundtrack
     }
   }
 `;
