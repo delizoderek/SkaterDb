@@ -32,10 +32,6 @@ function Home() {
       {/* <Navbar />  */}
       {/* <LoginForm />
       <SignupForm /> */}
-<<<<<<< HEAD
-      <h1 id="welcomeText">Welcome to Skater Hx, celebrate the past and future of skating </h1>
-      <Display />
-=======
       <h1>Welcome to our site </h1>
       {/* <Display /> */}
       <VideoDisplay />
@@ -49,7 +45,6 @@ function Home() {
     <li class="list-group-item">Video by Date</li>
   </ul>
 </div>
->>>>>>> develop
       <Carousel
         swipeable={false}
         draggable={false}
