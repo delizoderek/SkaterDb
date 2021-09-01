@@ -82,7 +82,7 @@ const SavedSkater = () => {
           {userData.SavedSkater.map((skater) => {
             return (
               <Card key={skater.skaterId} border='dark'>
-                {skater.image ? <Card.Img src={skater.image} alt={`The cover for ${skater.title}`} variant='top' /> : null}
+                {skater.image ? <Card.Img src={skater.image} alt={`The cover for ${skater.firstName}`} variant='top' /> : null}
                 <Card.Body>
                   <Card.Title>{skater.title}</Card.Title>
                   <p className='small'>Skaters {skater.skaters}</p>

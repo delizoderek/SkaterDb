@@ -1,5 +1,5 @@
 import React from "react";
-import Jumbotron from "../components/Jumbotron";
+import {Jumbotron} from "react-bootstrap";
 
 const WrongPage = () => {
   return (

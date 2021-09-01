@@ -3,9 +3,10 @@ import { Container } from "react-bootstrap";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { useQuery } from '@apollo/client';
-import LoginForm from '../components/LoginForm';
-import Navbar from '../components/Navbar';
-import SignUpForm from '../components/SignUpForm';
+import Display from '../components/Display'
+// import LoginForm from '../components/LoginForm';
+// import Navbar from '../components/Navbar';
+// import SignupForm from '../components/SignupForm';
 
 
 function Home() {
@@ -28,11 +29,11 @@ function Home() {
 };
   return (
     <div>
-      <Navbar /> 
-      <LoginForm />
-      <SignUpForm />
+      {/* <Navbar />  */}
+      {/* <LoginForm />
+      <SignupForm /> */}
       <h1>Welcome to our site </h1>
-
+      <Display />
       <Carousel
         swipeable={false}
         draggable={false}
