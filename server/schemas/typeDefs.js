@@ -46,17 +46,19 @@ const typeDefs = gql`
     Regular
     Goofy
     Both
-    Unkown
+    Unknown
   }
 
   type Query {
     # Because we have the context functionality in place to check a JWT and decode its data, we can use a query that will always find and return the logged in user's data
     me: User
     skaters: [Skater]
+    skater(_id:ID!): Skater
     # Query multiple skate videos given a skater id and name
-    skateVideos (skater: ID, name:String):[SkateVideo]
+    skateVideos:[SkateVideo]
     skateVideo (_id: ID!):SkateVideo
     brand(_id:ID!): Brand
+    brands:[Brand]
   }
 
   type Mutation {
