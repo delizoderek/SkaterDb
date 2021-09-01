@@ -87,7 +87,7 @@ const SavedSkater = () => {
                   <Card.Title>{skater.title}</Card.Title>
                   <p className='small'>Skaters {skater.skaters}</p>
                   <Card.Text>{skater.description}</Card.Text>
-                  <Button className='btn-block btn-danger' onClick={() => handleDeleteskater(skater.skaterId)}>
+                  <Button className='btn-block btn-danger' onClick={() => handleDeleteSkater(skater.skaterId)}>
                     Delete this skater!
                   </Button>
                 </Card.Body>
