@@ -2,7 +2,10 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-
+import { useQuery } from '@apollo/client';
+import LoginForm from '../components/LoginForm';
+import Navbar from '../components/Navbar';
+import SignUpForm from '../components/SignUpForm';
 
 
 function Home() {
@@ -25,6 +28,9 @@ function Home() {
 };
   return (
     <div>
+      <Navbar /> 
+      <LoginForm />
+      <SignUpForm />
       <h1>Welcome to our site </h1>
 
       <Carousel
@@ -58,6 +64,11 @@ function Home() {
       </Container>
     </div>
   );
-}
+};
 
+// import { QUERY_SKATERS } from '../utils/queries';
+  // const { loading, data } = useQuery(QUERY_SKATERS);
+  // const profiles = data?.profiles || [];
+
+  
 export default Home;
