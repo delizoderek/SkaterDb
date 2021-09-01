@@ -23,7 +23,6 @@ const typeDefs = gql`
     _id:ID!
     brandName: String!
     skateVideos: [SkateVideo]
-
   }
 
   type User {
@@ -36,6 +35,11 @@ const typeDefs = gql`
   type Auth {
     token: ID!
     user: User
+  }
+
+  type Confirm{
+    success:Boolean!,
+    error: String
   }
 
   enum StanceEnum {
@@ -58,6 +62,21 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
+
+    # Brand Mutations
+    addBrand(brandName:String!,skateVideos:[String]): Brand
+    removeBrand(brandId: ID!): Confirm
+    updateBrand(brandId: ID!, brandName: String, skateVideos: [String]): Brand
+
+    # # Skater Mutations
+    # addSkater(): Skater
+    # removeSkater(): Confirm
+    # updateSkater(): Skater
+
+    # # Video Mutations
+    # addVideo(): SkateVideo
+    # removeVideo(): Confirm
+    # updateVideo(): SkateVideo
   }
 `;
 
