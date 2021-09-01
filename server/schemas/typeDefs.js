@@ -8,7 +8,7 @@ const typeDefs = gql`
     firstName: String!
     lastName: String!
     stance: StanceEnum
-
+    videos: [SkateVideo]
   }
 
   type SkateVideo {
@@ -49,9 +49,18 @@ const typeDefs = gql`
     Unknown
   }
 
-  input Skater{
+  input NewSkater{
     firstName: String!
     lastName: String!
+    pronouns: String
+    stance: String
+    videos: [String]
+  }
+
+  # When updating a skater all inputs are optional
+  input SkaterChanges{
+    firstName: String
+    lastName: String
     pronouns: String
     stance: String
     videos: [String]
@@ -79,9 +88,9 @@ const typeDefs = gql`
     updateBrand(brandId: ID!, brandName: String, skateVideos: [String]): Confirm
 
     # Skater Mutations
-    addSkater(): Skater
-    removeSkater(): Confirm
-    updateSkater(): Skater
+    addSkater(input: NewSkater): Skater
+    removeSkater(skaterId: ID!): Confirm
+    updateSkater(skaterId: ID!, input: SkaterChanges): Confirm
 
     # # Video Mutations
     # addVideo(): SkateVideo

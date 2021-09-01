@@ -24,7 +24,7 @@ const skateVideoSchema = new Schema({
       ref: "Skater",
     },
   ],
-  vidLink: [videoLinkSchema],
+  vidLink: String,
   soundtrack: [soundtrackSchema],
 });
 

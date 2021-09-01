@@ -25,7 +25,7 @@ const Query = {
     return await SkateVideo.find().populate('skaters')
   },
   skateVideo: async (parent, { _id }) => {
-    return await SkateVideo.findByID(_id).populate('skaters')
+    return await SkateVideo.findById(_id).populate('skaters')
   },
 };
 
