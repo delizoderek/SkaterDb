@@ -6,12 +6,12 @@ const {Brand,Skater,SkateVideo} = require('../../models');
 const brandMutations = {
     addBrand:async (parent,{brandName,skateVideos},context) => {
         const queryObj = {brandName};
-        if(skateVideos){
-            queryObj.skateVideos = [...skateVideos];
-        }
-
+        queryObj.skateVideos = skateVideos? [...skateVideos]:[];
         try {
             const newBrand = await Brand.create(queryObj);
+            for(let vidId of skateVideos){
+                await SkateVideo.findByIdAndUpdate({_id: vidId},{$addToSet:{brands:newBrand._id}});
+            }
             return newBrand;
         } catch (err) {
             console.log(err);
@@ -20,19 +20,21 @@ const brandMutations = {
 
     removeBrand: async (parent, {brandId},context) => {
         try {
-            const skater = await Brand.findByIdAndDelete({_id: brandId});
-            // const videos = [...skater.videos];
-            if(skater){
-                return {success: true};
+            const brand = await Brand.findOneAndDelete({_id: brandId});
+            const videos = brand.skateVideos;
+            console.log(videos);
+            for(let videoId of videos){
+                await SkateVideo.findByIdAndUpdate({_id: videoId},{$pull:{brands:brandId}});
             }
-            return {success: false, error: 'Server Side Error'};
+
+            return {success: true};
         } catch (error) {
             console.log(error);
             return {success: false, error: 'Server Side Error'};
         }
     },
 
-    updateBrand: async (parent, args, context) => {
+    updateBrand: async (parent, {_id,brandName,skateVideos}, context) => {
         try {
             const skater = Skater.find({_id: skaterId});
             return skater;
