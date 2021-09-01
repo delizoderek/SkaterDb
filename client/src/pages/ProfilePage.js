@@ -36,7 +36,7 @@ const SavedSkater = () => {
   }, [userDataLength]);
 
   // create function that accepts the Skater's mongo _id value as param and deletes the Skater from the database
-  const handleDeleteSkater = async (SkaterId) => {
+  const handleDeleteSkater = async (skaterId) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
     if (!token) {
@@ -82,12 +82,12 @@ const SavedSkater = () => {
           {userData.SavedSkater.map((skater) => {
             return (
               <Card key={skater.skaterId} border='dark'>
-                {skater.image ? <Card.Img src={skater.image} alt={`The cover for ${skater.title}`} variant='top' /> : null}
+                {skater.image ? <Card.Img src={skater.image} alt={`The cover for ${skater.firstName}`} variant='top' /> : null}
                 <Card.Body>
                   <Card.Title>{skater.title}</Card.Title>
                   <p className='small'>Skaters {skater.skaters}</p>
                   <Card.Text>{skater.description}</Card.Text>
-                  <Button className='btn-block btn-danger' onClick={() => handleDeleteskater(skater.skaterId)}>
+                  <Button className='btn-block btn-danger' onClick={() => handleDeleteSkater(skater.skaterId)}>
                     Delete this skater!
                   </Button>
                 </Card.Body>
