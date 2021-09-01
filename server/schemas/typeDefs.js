@@ -68,7 +68,7 @@ const typeDefs = gql`
     # Brand Mutations
     addBrand(brandName:String!,skateVideos:[String]): Brand
     removeBrand(brandId: ID!): Confirm
-    updateBrand(brandId: ID!, brandName: String, skateVideos: [String]): Brand
+    updateBrand(brandId: ID!, brandName: String, skateVideos: [String]): Confirm
 
     # # Skater Mutations
     # addSkater(): Skater
