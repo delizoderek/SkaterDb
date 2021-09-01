@@ -28,11 +28,11 @@ function Home() {
 }
 };
   return (
-    <div>
+    <div className= "homePage">
       {/* <Navbar />  */}
       {/* <LoginForm />
       <SignupForm /> */}
-      <h1>Welcome to our site </h1>
+      <h1 id="welcomeText">Welcome to Skater Hx, celebrate the past and future of skating </h1>
       <Display />
       <Carousel
         swipeable={false}

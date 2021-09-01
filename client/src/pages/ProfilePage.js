@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
 
 import Auth from '../utils/auth';
-// import { removeSkaterId } from '../utils/localStorage';}
+// import { removeSkaterId } from '../utils/localStorage';
 
 const SavedSkater = () => {
   const [userData, setUserData] = useState({});
@@ -36,7 +36,7 @@ const SavedSkater = () => {
   }, [userDataLength]);
 
   // create function that accepts the Skater's mongo _id value as param and deletes the Skater from the database
-  const handleDeleteSkater = async (skaterId) => {
+  const handleDeleteSkater = async (SkaterId) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
     if (!token) {
@@ -54,7 +54,7 @@ const SavedSkater = () => {
       // const updatedUser = await response.json();
       // setUserData(updatedUser);
       // upon success, remove Skater's id from localStorage
-      removeSkaterId(skaterId);
+      // removeSkaterId(skaterId);
     } catch (err) {
       console.error(err);
     }
@@ -82,7 +82,7 @@ const SavedSkater = () => {
           {userData.SavedSkater.map((skater) => {
             return (
               <Card key={skater.skaterId} border='dark'>
-                {skater.image ? <Card.Img src={skater.image} alt={`The cover for ${skater.firstName}`} variant='top' /> : null}
+                {skater.image ? <Card.Img src={skater.image} alt={`The cover for ${skater.title}`} variant='top' /> : null}
                 <Card.Body>
                   <Card.Title>{skater.title}</Card.Title>
                   <p className='small'>Skaters {skater.skaters}</p>
