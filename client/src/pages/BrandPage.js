@@ -55,6 +55,7 @@ const SearchBrand = () => {
           ? `Viewing ${searchedBrand.length} results:`
           : 'Search for a brand'}
       </h2>
+                    <Button></Button>
       <CardColumns>
         {searchedBrand.map((brand) => {
           return (
