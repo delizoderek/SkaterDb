@@ -48,6 +48,10 @@ function Home() {
      
         Disabled
       </Nav.Link>
+      <Nav.Link href="/">Home</Nav.Link>
+      <Nav.Link href="/brands">Video by Brand</Nav.Link>
+      <Nav.Link href="/skaters">Video by Skater</Nav.Link>
+      <Nav.Link href="/movietime">Theatre</Nav.Link>
     </Nav>
 
       <Carousel className="container" 
