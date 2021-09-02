@@ -14,6 +14,7 @@ import Navbar from "./components/Navbar";
 import WrongPage from "./pages/WrongPage";
 import BrandPage from "./pages/BrandPage";
 import VideoPage from "./pages/VideoPage";
+import SkaterProfile from "./pages/SkaterProfile"
 // import ContributePage from "./pages/ContributePage";
 
 import ContributePage from "./pages/ContributePage";
@@ -50,7 +51,6 @@ function App() {
           <Route exact path="/search" component={SearchSkater}/>
           <Route exact path="/brand" component={BrandPage} />
           <Route exact path="/profile" component={ProfilePage} />
-          {/*<Route exact path="/contribute" component={ContributePage} />*/}
           <Route exact path="/videos" component={VideoPage} />
           <Route exact path="/contribute" component={ContributePage}/>
           <Route exact path ="/404" component={WrongPage}/>
