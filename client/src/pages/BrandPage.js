@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Jumbotron, Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
-import Display from '../components/Display';
 import Auth from '../utils/auth';
 import { useMutation } from '@apollo/client';
-
+import Display from  '../components/Display'
 const SearchBrand = () => {
   // create state for holding returned google api data
   // Needs to be changed for searching brand
@@ -55,7 +54,6 @@ const SearchBrand = () => {
           ? `Viewing ${searchedBrand.length} results:`
           : 'Search for a brand'}
       </h2>
-                    <Button></Button>
       <CardColumns>
         {searchedBrand.map((brand) => {
           return (
