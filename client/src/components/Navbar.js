@@ -33,10 +33,10 @@ const AppNavbar = () => {
             Skater Hx
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbar' />
-          <SearchBar/> 
+          <SearchBar/>
           <Navbar.Collapse id='navbar'>
             <Nav className='ml-auto'>
-              <Nav.Link as={Link} to='/'>
+              <Nav.Link as={Link} to='/contribute'>
                 Contribute
               </Nav.Link>
               
