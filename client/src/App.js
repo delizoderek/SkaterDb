@@ -15,9 +15,9 @@ import WrongPage from "./pages/WrongPage";
 import BrandPage from "./pages/BrandPage";
 import VideoPage from "./pages/VideoPage";
 import SkaterProfile from "./pages/SkaterProfile"
-// import ContributePage from "./pages/ContributePage";
-
 import ContributePage from "./pages/ContributePage";
+import SkaterProfile from "./pages/SkaterProfile";
+import BrandProfile from "./pages/BrandProfile";
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -52,9 +52,10 @@ function App() {
           <Route exact path="/brand" component={BrandPage} />
           <Route exact path="/profile" component={ProfilePage} />
           <Route exact path="/videos" component={VideoPage} />
+          <Route exact path="/brand/:id" component={BrandProfile} />
           <Route exact path="/contribute" component={ContributePage}/>
           <Route exact path ="/404" component={WrongPage}/>
-          <Route exact path ="/SkaterProf" component={SkaterProfile}/>
+          <Route exact path ="/skater/id" component={SkaterProfile}/>
           <Route exact path="/" component={Home}/>
           
           <Redirect to="/404"  />
