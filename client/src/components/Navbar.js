@@ -9,21 +9,7 @@ import Auth from '../utils/auth';
 const AppNavbar = () => {
   // set modal display state
   const [showModal, setShowModal] = useState(false);
-  const SearchBar = () => (
-    <div>
-    <form action="/" method="get" className = "searchBar">
-        <label htmlFor="header-search">
-        </label>
-        <input
-            type="text"
-            id="header-search"
-            placeholder="Search Skater Hx"
-            name="s" 
-        />
-        <button type="submit">Search</button>
-    </form>
-    </div>
-);
+
   return (
     <>
     <div>
@@ -33,7 +19,6 @@ const AppNavbar = () => {
             Skater Hx
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbar' />
-          <SearchBar/>
           <Navbar.Collapse id='navbar'>
             <Nav className='ml-auto'>
               <Nav.Link as={Link} to='/contribute'>

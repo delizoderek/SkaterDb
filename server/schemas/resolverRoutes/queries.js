@@ -16,10 +16,10 @@ const Query = {
     return await Brand.find().populate('skateVideos');
   },
   skaters: async () => {
-    return await Skater.find().populate('skateVideos');
+    return await Skater.find().populate('videos');
   },
   skater: async (parent, { _id }) => {
-    return await Skater.findById(_id).populate('skateVideos');
+    return await Skater.findById(_id).populate('videos');
   },
   skateVideos: async () => {
     return await SkateVideo.find().populate('skaters')
