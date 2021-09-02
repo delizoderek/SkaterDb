@@ -9,13 +9,16 @@ const skateVideoSchema = new Schema({
   releaseDate: {
     type: Date,
     required: false,
+    default: "",
   },
   videoCover: {
     type: String,
     required: false,
+    default: "",
   },
   vidLink: {
     type: String,
+    default: "",
   },
   brands: [{
     type: Schema.Types.ObjectId,

@@ -2,8 +2,11 @@ const {Brand,Skater,SkateVideo} = require('../../../models');
 
 const videoMutations = {
     addVideo: async (parent,{title, input}) => {
+
         try {
             const createdVideo = await SkateVideo.create({title,...input});
+            const newVideo = {title};
+            newVideo.releaseDate = input.releaseDate || "";
             if(input.brands){
                 for(let brandId of brands){
                     await Brand.findByIdAndUpdate(brandId,{$addToSet:{skateVideos: videoId}});
@@ -44,23 +47,44 @@ const videoMutations = {
     },
 
     updateVideo: async (parent,{videoId, title, input}) => {
-        const queryObj = {title,...input};
+        const queryObj = {};
+        if(title){
+            queryObj.title = title;
+        }
+
+        if(input.releaseDate){
+            queryObj.releaseDate = input.releaseDate;
+        }
+
+        if(input.vidLink){
+            queryObj.vidLink = input.vidLink;
+        }
+
+        if(input.skaters){
+            queryObj.skaters = input.skaters;
+        }
+
+        if(input.brands){
+            queryObj.brands = input.brands;
+        }
+
         try {
             const updatedSkater = await SkateVideo.findByIdAndUpdate(videoId,queryObj,{new:true});
             if(input.brands){
-                for(let brandId of brands){
+                for(let brandId of input.brands){
                     await Brand.findByIdAndUpdate(brandId,{$addToSet:{skateVideos: videoId}});
                 }
             }
 
             if(input.skaters){
-                for(let skaterId of skaters){
+                for(let skaterId of input.skaters){
                     await Skater.findByIdAndUpdate(skaterId,{$addToSet:{videos: videoId}});
                 }
             }
-            return updatedSkater;
+            return {success:true};
         } catch (error) {
             console.log(error);
+            return {success:false, error:'Something happened on the server ends'};
         }
     }
 };

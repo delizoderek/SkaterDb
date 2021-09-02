@@ -17,6 +17,7 @@ const typeDefs = gql`
     releaseDate: String
     vidLink: String
     skaters: [Skater]
+    brands: [Brand]
   }
 
   type Brand {
@@ -105,7 +106,7 @@ const typeDefs = gql`
     # # Video Mutations
     addVideo(title: String!, input: VideoInput): SkateVideo
     removeVideo(videoId: ID!): Confirm
-    updateVideo(videoId: ID!, title: String, input: VideoInput): SkateVideo
+    updateVideo(videoId: ID!, title: String, input: VideoInput): Confirm
   }
 `;
 
