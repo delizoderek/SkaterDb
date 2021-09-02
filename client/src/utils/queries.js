@@ -16,6 +16,10 @@ export const GET_SKATERS = gql`
       lastName
       pronouns
       stance
+      videos{
+        title
+        vidLink
+      }
     }
   }
 `;
