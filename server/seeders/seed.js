@@ -149,7 +149,7 @@ db.once("open", async () => {
     }
     return {
       title: video.title,
-      release_date: video.release_date,
+      releaseDate: video.release_date,
       videoCover: video.videoCover,
       brands: brandIds,
       skaters: skaterIds,

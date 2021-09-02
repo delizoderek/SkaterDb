@@ -6,13 +6,19 @@ const skateVideoSchema = new Schema({
     type: String,
     required: true,
   },
-  release_date: {
+  releaseDate: {
     type: Date,
-    required: true,
+    required: false,
+    default: "",
   },
   videoCover: {
     type: String,
     required: false,
+    default: "",
+  },
+  vidLink: {
+    type: String,
+    default: "",
   },
   brands: [{
     type: Schema.Types.ObjectId,
@@ -24,8 +30,7 @@ const skateVideoSchema = new Schema({
       ref: "Skater",
     },
   ],
-  vidLink: String,
-  soundtrack: [soundtrackSchema],
+  soundtrack: [String],
 });
 
 const SkateVideo = model("SkateVideo", skateVideoSchema);

@@ -2,6 +2,7 @@ const { AuthenticationError } = require("apollo-server-express");
 const { User, Brand, Skater, SkateVideo } = require("../../models");
 const {addBrand,removeBrand,updateBrand} = require("./mutations/brandMutations");
 const {addSkater,removeSkater,updateSkater} = require("./mutations/skaterMutations");
+const {addVideo,removeVideo,updateVideo} = require("./mutations/videoMutations");
 const { signToken } = require("../../utils/auth");
 
 const Mutation = {
@@ -35,7 +36,10 @@ const Mutation = {
   updateBrand,
   addSkater,
   removeSkater,
-  updateSkater
+  updateSkater,
+  addVideo,
+  removeVideo,
+  updateVideo
 };
 
 module.exports = Mutation;
