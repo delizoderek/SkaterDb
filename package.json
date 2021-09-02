@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "react-multi-carousel": "^2.6.5"
+    "react-multi-carousel": "^2.6.5",
+    "react-player": "^2.9.0"
   }
 }
