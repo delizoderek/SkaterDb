@@ -14,7 +14,6 @@ import Navbar from "./components/Navbar";
 import WrongPage from "./pages/WrongPage";
 import BrandPage from "./pages/BrandPage";
 import VideoPage from "./pages/VideoPage";
-import SkaterProfile from "./pages/SkaterProfile"
 import ContributePage from "./pages/ContributePage";
 import SkaterProfile from "./pages/SkaterProfile";
 import BrandProfile from "./pages/BrandProfile";
