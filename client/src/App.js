@@ -13,6 +13,7 @@ import ProfilePage from "./pages/ProfilePage";
 import Navbar from "./components/Navbar";
 import WrongPage from "./pages/WrongPage";
 import BrandPage from "./pages/BrandPage";
+import SkaterProfile from "./pages/SkaterProfile";
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -47,7 +48,9 @@ function App() {
           <Route exact path="/brand" component={BrandPage} />
           <Route exact path="/saved" component={ProfilePage} />
           <Route exact path ="/404" component={WrongPage}/>
+          <Route exact path ="/SkaterProf" component={SkaterProfile}/>
           <Route exact path="/" component={Home}/>
+          
           <Redirect to="/404"  />
         </Switch>
       </ApolloProvider>
