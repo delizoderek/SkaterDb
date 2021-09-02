@@ -29,9 +29,9 @@ const SearchBrand = () => {
   };
 
   // create function to handle saving a skater to our database
-  const handleSavedBrand = async (brandId) => {
+  const handleSaveBrand = async (brandId) => {
     // find the brand in `searchedbrand` state by the matching id
-    const brandToSave = searchedBrand.find((brand) => brand.brandId === skaterId);
+    const brandToSave = searchedBrand.find((brand) => brand.brandId === brandId);
     // get token
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
@@ -82,7 +82,7 @@ const SearchBrand = () => {
             : 'Search for a brand'}
         </h2>
         <CardColumns>
-          {searchedSkater.map((skater) => {
+          {searchedBrand.map((brand) => {
             return (
               <Card key={brand.brandId} border='dark'>
                 {brand.image ? (
@@ -93,7 +93,6 @@ const SearchBrand = () => {
                   <Card.Text>{brand.description}</Card.Text>
                   {Auth.loggedIn() && (
                     <Button
-    
                       className='btn-block btn-info'
                       onClick={() => handleSaveBrand(brand.brandId)}>
                      
