@@ -54,7 +54,9 @@ function App() {
           <Route exact path="/videos" component={VideoPage} />
           <Route exact path="/contribute" component={ContributePage}/>
           <Route exact path ="/404" component={WrongPage}/>
+          <Route exact path ="/SkaterProf" component={SkaterProfile}/>
           <Route exact path="/" component={Home}/>
+          
           <Redirect to="/404"  />
         </Switch>
       </ApolloProvider>
