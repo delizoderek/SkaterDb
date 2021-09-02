@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Jumbotron, Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
 
 import Auth from '../utils/auth';
-import { useMutation } from '@apollo/client';
+import { useQuery } from 'react-query';
 // import { saveSkaterIds, getFavoriteSkaters } from '../utils/localStorage'; Use local storage if we need to
 
 const SearchBrand = () => {
