@@ -39,7 +39,7 @@ function Home() {
       {/*} <VideoDisplay />*/}
       <div className= "d-flex flex-wrap">
       <Nav defaultActiveKey="/home" className="flex-column">
-      <Nav.Link href="/home">Active</Nav.Link>
+      <Nav.Link href="/">Active</Nav.Link>
       <Nav.Link eventKey="link-1">Category</Nav.Link>
       <Nav.Link eventKey="link-2">Video by Brand</Nav.Link>
       <Nav.Link eventKey="link-3">Video by Skater</Nav.Link>
