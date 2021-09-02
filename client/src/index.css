@@ -1,0 +1,36 @@
+:root{
+  background-color:#5f27cd;
+}
+body {
+  font-family: 'Calibri', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Rubik Mono One', sans-serif;
+}
+
+.small {
+  font-weight: 300;
+  font-style: italic;
+}
+.searchBar{
+  background-color: #8395a7;
+}
+.navbar{
+  background-color: #5f27cd;
+  
+}
+/* .homePage{
+  background-color: #c8d6e5;
+} */
+#welcomeText{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 1000;
+  font-size: 3rem;
+  text-align: center;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "skater-hx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "scripts": {
+    "seed": "node server/seeders/seed.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "start": "node server/server.js",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "react-multi-carousel": "^2.6.5"
+  }
+}
