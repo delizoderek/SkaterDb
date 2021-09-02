@@ -3,7 +3,8 @@ import { Container } from "react-bootstrap";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { useQuery } from '@apollo/client';
-import Display, { VideoDisplay } from '../components/Display'
+import { Button, Navbar, Nav, NavItem, NavDropdown, MenuItem,menuVariant } from 'react-bootstrap';
+// import Display, { VideoDisplay } from '../components/Display'
 // import LoginForm from '../components/LoginForm';
 // import Navbar from '../components/Navbar';
 // import SignupForm from '../components/SignupForm';
@@ -28,24 +29,28 @@ function Home() {
 }
 };
   return (
+  
     <div className= "homePage">
       {/* <Navbar />  */}
       {/* <LoginForm />
       <SignupForm /> */}
-      <h1>Welcome to our site </h1>
+      <h1>Welcome to Skater Hx, see the past and view the future of skating</h1>
       {/* <Display /> */}
-      <VideoDisplay />
-      <div class="card" className="width: 18rem;">
-  <div class="card-header">
-    Browse by Category
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Video by Brand</li>
-    <li class="list-group-item">Video by Skater</li>
-    <li class="list-group-item">Video by Date</li>
-  </ul>
-</div>
-      <Carousel
+      {/*} <VideoDisplay />*/}
+      <div className= "d-flex flex-wrap">
+      <Nav defaultActiveKey="/home" className="flex-column">
+      <Nav.Link href="/home">Active</Nav.Link>
+      <Nav.Link eventKey="link-1">Category</Nav.Link>
+      <Nav.Link eventKey="link-2">Video by Brand</Nav.Link>
+      <Nav.Link eventKey="link-3">Video by Skater</Nav.Link>
+      <Nav.Link eventKey="link-4">Video by Date</Nav.Link>
+      <Nav.Link eventKey="disabled" disabled>
+     
+        Disabled
+      </Nav.Link>
+    </Nav>
+
+      <Carousel className="container" 
         swipeable={false}
         draggable={false}
         showDots={true}
@@ -69,13 +74,14 @@ function Home() {
         <div><img src="https://www.placecage.com/c/200/300"></img></div>
         <div><img src="https://www.placecage.com/200/300"></img></div>
         <div><img src="https://www.placecage.com/g/200/300"></img></div>
-      </Carousel>;
-
+      </Carousel>
+      </div>
       <Container>
 
       </Container>
     </div>
-  );
+
+  )
 };
 
 // import { QUERY_SKATERS } from '../utils/queries';
