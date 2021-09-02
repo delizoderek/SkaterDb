@@ -45,11 +45,40 @@ export const GET_VIDEOS = gql`
   query allVideos {
     videos {
       title
-      releasedate
+      releaseDate
       vidLink
       brand
       skaters
       soundtrack
+    }
+  }
+`;
+
+export const GET_SINGLE_SKATER = gql`
+  query getSingleSkater($skaterId: ID!) {
+    skater(skaterId: $skaterId) {
+      _id
+      firstName
+      lastName
+      pronouns
+      stance
+    }
+  }
+`;
+
+export const GET_SINGLE_VIDEO = gql`
+  query getSingleVideo($skateVideo: ID!) {
+    skateVideo(skateVideoId: $skateVideoId) {
+      _id
+      title
+      releaseDate
+      vidLink
+      brand
+      skaters{
+        firstName
+        lastName
+      }
+      soundTrack
     }
   }
 `;
