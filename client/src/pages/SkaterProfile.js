@@ -17,7 +17,7 @@ function SkaterProfile () {
 
     return(
         <div>
-        <h1>hi this is working</h1>
+        <h1>{skater.name}</h1>
         {loading?<h1>loading</h1>:skater.map((skater, i) => ( 
         < VideoPlayer key={i} link={skater.videos.vidLink}/>))}
         <Link to="/skater">Back To Skaters</Link>

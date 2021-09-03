@@ -43,3 +43,16 @@ h6 {
 #box-styling{
   background-color: antiquewhite;
 }
+
+#vid{
+  display: flex;
+  flex-direction: row;
+  max-width: fit-content;
+  max-height: fit-content;
+  margin: 1.5rem;
+}
+
+#sidepanel{
+  background: antiquewhite;
+  max-height: fit-content;
+}
