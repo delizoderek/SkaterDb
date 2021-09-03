@@ -1,7 +1,8 @@
 // see SignupForm.js for comments
 import React, { useState } from "react";
 import { Form, Button, Alert, Row, Col, ListGroup } from "react-bootstrap";
-import {useQuery,useMutation} from '@apollo/client'
+import {useQuery,useMutation} from '@apollo/client';
+import Search from './helpers/modalSearch';
 // import { useMutation, useQuery } from "@apollo/client";
 import { GET_VIDWITHID } from "./formQueries";
 
@@ -11,6 +12,10 @@ export function VideoForm() {
   const [videoList, setVideoList] = useState([]);
   const [soundtrackList, setSoundtrackList] = useState([]);
   const { loading, error, data } = useQuery(GET_VIDWITHID);
+  let vidList = [];
+  if(data){
+    vidList = [...data.skateVideos];
+  }
 
   const handleBrandClick = (e) => {
     e.preventDefault();
