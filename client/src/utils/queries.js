@@ -27,22 +27,17 @@ export const GET_SKATERS = gql`
 export const GET_BRANDS = gql`
   query allBrands {
     brands {
+    _id
+    brandName
+    logo
+    description
+    skateVideos {
+      title
       _id
-      brandName
-      description
-      skateVideos {
-        _id
-        title
-        vidLink
-        skaters {
-        _id
-        firstName
-        lastName
-        pronouns
-        stance
-        }
-      }
+      releaseDate
+      vidLink
     }
+  }
   }
 `;
 

@@ -36,6 +36,7 @@ function VideoDisplay(props) {
   function Brand() {
     let {id} = useParams();
     const {loading, data} = useQuery(GET_BRANDS)
+    console.log('hello world')
     const brands = data?.brands || [];
       return (
         <div>
