@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from 'react-router-dom'
 import { BrandCard } from "../components/profileCard";
 import { useQuery } from "@apollo/client";
 import { GET_BRANDS } from "../utils/queries";
@@ -168,6 +169,9 @@ const SearchBrand = () => {
                         <Card.Title>{item.brandName}</Card.Title>
                         <p className="small">Videos:{item.skateVideos.length}</p>
                         <Card.Text>{item.description}</Card.Text>
+                        <Link to={`/brand/${item._id}`} >
+                            {item.brandName}
+                        </Link>
                       </Card.Body>
                     </Card>
                   );

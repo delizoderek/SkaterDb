@@ -54,9 +54,26 @@ export const GET_VIDEOS = gql`
   }
 `;
 
+export const GET_SINGLE_BRAND = gql`
+  query Query($brandId: ID!) {
+  brand(_id: $brandId) {
+    _id
+    brandName
+    logo
+    description
+    skateVideos {
+      _id
+      title
+      releaseDate
+      vidLink
+    }
+  }
+}
+`;
+
 export const GET_SINGLE_SKATER = gql`
   query getSingleSkater($skaterId: ID!) {
-    skater(skaterId: $skaterId) {
+    skater(_id: $skaterId) {
       _id
       firstName
       lastName
@@ -66,9 +83,9 @@ export const GET_SINGLE_SKATER = gql`
         title
         releaseDate
         vidLink
-        brand
-        skaters
-        soundtrack
+        brands{
+          brandName
+        }
       }
     }
   }
