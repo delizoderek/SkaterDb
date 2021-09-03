@@ -1,24 +1,26 @@
 import React from 'react';
+import {useParams} from 'react-router-dom'
 import {Card, VideoCard, BrandCard} from './profileCard';
 import { useQuery } from '@apollo/client';
 import { GET_SKATERS, GET_VIDEOS, GET_BRANDS } from '../utils/queries';
 
 
 
-export function Display() {
+function Display(props) {
+let {id} = useParams();
 const {loading, data} = useQuery(GET_SKATERS)
 const skaters = data?.skaters || [];
   return (
     <div>
-      {loading?<h1>loading</h1>:skaters.map((user) => (
-        <Card name={user.firstName +" " + user.lastName} pronouns={user.pronouns} key={user.id} stance={user.stance} totalVideos={user.videos} />
+      {loading?<h1>loading</h1>:skaters.map((skater,i) => (
+        <Card name={skater.firstName +" " + skater.lastName} pronouns={skater.pronouns} key={i} skaterId={skater._id} stance={skater.stance} totalVideos={skater.videos} />
       ))}
     </div>
   );
 }
 
 
-export function VideoDisplay() {
+function VideoDisplay(props) {
   const {loading, data} = useQuery(GET_VIDEOS)
   const videos = data?.videos || [];
     return (
@@ -31,7 +33,7 @@ export function VideoDisplay() {
   }
 
 
-  export function Brand() {
+  function Brand(props) {
     const {loading, data} = useQuery(GET_BRANDS)
     const brands = data?.brands || [];
       return (
@@ -43,4 +45,4 @@ export function VideoDisplay() {
       );
     }
 
-  export default Display;
+export {Display, VideoDisplay, Brand};

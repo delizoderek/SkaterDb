@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Jumbotron, Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
 // import Alphabet from '../components/Alphabet'
-import Display, {Brand} from  '../components/Display'
+import {Display, Brand} from  '../components/Display'
 
 
 import Auth from '../utils/auth';
