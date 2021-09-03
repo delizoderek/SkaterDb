@@ -47,7 +47,7 @@ export const GET_BRANDS = gql`
 
 export const GET_VIDEOS = gql`
   query allVideos {
-    videos {
+    skateVideos {
       title
       releaseDate
       vidLink
