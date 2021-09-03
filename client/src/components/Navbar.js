@@ -19,7 +19,6 @@ const AppNavbar = () => {
             Skater Hx
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbar' />
-          
           <Navbar.Collapse id='navbar'>
             <Nav className='ml-auto'>
               <Nav.Link as={Link} to='/contribute'>

@@ -1,14 +1,26 @@
-import React from "react";
-import VideoPlayer from "../components/VideoPlayer";
+import React,{useState} from "react";
+import {Tabs,BrandForm,VideoForm,SkaterForm} from "./contributeForm";
 
 function ContributePage() {
+    const [currentPage, setCurrentPage] = useState('Add Video');
+
+    const renderPage = () => {
+        if(currentPage === 'Add Video'){
+            return <VideoForm/>;
+        } else if(currentPage === 'Add Skater'){
+            return <SkaterForm/>;
+        } else {
+            return <BrandForm/>;
+        }
+    }
+
+    const handlePageChange = (newPage) => setCurrentPage(newPage);
   return (
-    <div className="d-flex flex-grow-1 m-auto bg-transparent">
-      <div className="bg-dark">
+    <div className="d-flex justify-content-center m-auto bg-transparent">
+      <div className="col-10 col-lg-8 p-0 m-4 rounded bg-light">
         {/*Render a YouTube video player*/}
-        <VideoPlayer link={"https://vimeo.com/3535159"}/>
-        <VideoPlayer link={"https://youtu.be/Sw14rswp9AI"}/>
-        <VideoPlayer link={"https://youtube.com/playlist?list=PLtxR_E_ZEQsx9AWlYIu0ATmgio9uOzwsc"}/>
+        <Tabs currentPage={currentPage} handlePageChange={handlePageChange}/>
+        {renderPage()}
       </div>
     </div>
   );
