@@ -32,6 +32,7 @@ export const GET_BRANDS = gql`
       description
       skateVideos {
         _id
+        title
         vidLink
         skaters {
         _id

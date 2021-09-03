@@ -33,13 +33,14 @@ function VideoDisplay(props) {
   }
 
 
-  function Brand(props) {
+  function Brand() {
+    let {id} = useParams();
     const {loading, data} = useQuery(GET_BRANDS)
     const brands = data?.brands || [];
       return (
         <div>
-          {loading?<h1>loading</h1>:brands.map((user) => (
-            <BrandCard name={user.brandName} description={user.description} key={user._id}  totalVideos={user.skateVideos} url={user.skateVideos.vidLinks[0]}/>
+          {loading?<h1>loading</h1>:brands.map((brand) => (
+            <BrandCard name={brand.brandName} description={brand.description} key={brand._id}  totalVideos={brand.skateVideos} url={brand.skateVideos.vidLinks[0]}/>
           ))}
         </div>
       );

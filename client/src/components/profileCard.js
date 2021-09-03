@@ -65,14 +65,9 @@ export function BrandCard(props) {
   return (
     <div>
       <div className="card" style={cardStyle}>
-        <img
-          className="card-img-top"
-          src={`${props.url}`}
-          alt="Card cap"
-        />
         <div className="card-body">
           <h5 className="card-title">{props.name}</h5>
-          <p className="card-text">About: {props.description} Total Videos: {props.totalVideos.length}</p>
+          <p className="card-text">About: {props.description} Total Videos: {props.totalVideos}</p>
           {/* <div><img src={props.vidLink}></img></div> */}
           {/* <a href="#" className="btn btn-primary">
              {props.name}
