@@ -8,7 +8,7 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 import Home from "./pages/Home";
-import SearchSkater from "./pages/SearchSkater";
+import SkaterList from "./pages/SkaterList";
 import ProfilePage from "./pages/ProfilePage";
 import Navbar from "./components/Navbar";
 import WrongPage from "./pages/WrongPage";
@@ -48,10 +48,10 @@ function App() {
       <ApolloProvider client={client}>
         <Navbar />
         <Switch>
-          <Route exact path="/skater" component={SearchSkater}/>
+          <Route exact path="/skater" component={SkaterList}/>
           <Route exact path="/brand" component={BrandPage} />
           <Route exact path="/profile" component={ProfilePage} />
-          <Route exact path="/videos" component={VideoPage} />
+          <Route exact path="/video/:id" component={VideoPage} />
           <Route exact path="/brand/:id" component={BrandProfile} />
           <Route exact path="/contribute" component={ContributePage}/>
           <Route exact path ="/skater/:id" component={SkaterProfile}/>
