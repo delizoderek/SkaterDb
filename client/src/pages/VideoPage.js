@@ -1,13 +1,14 @@
 import React from 'react';
-import MovieTime from '../components/VideoContent';
+import VideoPlayer from '../components/VideoPlayer';
 
 const VideoPage = () => {
   return (
-    <div className="d-flex flex-grow-1 m-auto bg-transparent">
-      <div className="bg-dark">
+    <div className="container bg-dark">
+      <h1>Here Are Some of Our Favorite Videos:</h1>
         {/*Render a YouTube video player*/}
-        <MovieTime />
-      </div>
+      
+        <VideoPlayer link = {"https://vimeo.com/4753710"} />
+    
     </div>
   );
 };
