@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Jumbotron, Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
+// import Alphabet from '../components/Alphabet'
+import {Display, Brand} from  '../components/Display'
+
 
 import Auth from '../utils/auth';
 import { useMutation } from '@apollo/client';
@@ -64,34 +67,10 @@ const SearchSkater = () => {
       console.error(err);
     }
   };
+  
 
   return (
     <>
-      <Jumbotron fluid className='text-light bg-dark'>
-        <Container>
-          <h1>Search for Skater!</h1>
-          <Form onSubmit={handleFormSubmit}>
-            <Form.Row>
-              <Col xs={12} md={8}>
-                <Form.Control
-                  name='searchInput'
-                  value={searchInput}
-                  onChange={(e) => setSearchInput(e.target.value)}
-                  type='text'
-                  size='lg'
-                  placeholder='Search for a skater'
-                />
-              </Col>
-              <Col xs={12} md={4}>
-                <Button type='submit' variant='success' size='lg'>
-                  Submit Search
-                </Button>
-              </Col>
-            </Form.Row>
-          </Form>
-        </Container>
-      </Jumbotron>
-
       <Container>
         <h2>
           {searchedSkater.length
@@ -125,6 +104,13 @@ const SearchSkater = () => {
           })}
         </CardColumns>
       </Container>
+          {/* <Alphabet /> */}
+          <Container>
+            <CardColumns>
+          <Display className="flex-row" />
+          </CardColumns>
+        
+          </Container>
     </>
   );
 };

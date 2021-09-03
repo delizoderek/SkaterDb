@@ -9,13 +9,14 @@ import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 import Home from "./pages/Home";
 import SearchSkater from "./pages/SearchSkater";
-import SkaterProfile from "./pages/SkaterProfile";
 import ProfilePage from "./pages/ProfilePage";
 import Navbar from "./components/Navbar";
 import WrongPage from "./pages/WrongPage";
 import BrandPage from "./pages/BrandPage";
-import BrandProfile from "./pages/BrandProfile";
 import VideoPage from "./pages/VideoPage";
+import ContributePage from "./pages/ContributePage";
+import SkaterProfile from "./pages/SkaterProfile";
+import BrandProfile from "./pages/BrandProfile";
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -40,18 +41,20 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+
 function App() {
   return (
     <Router>
       <ApolloProvider client={client}>
         <Navbar />
         <Switch>
-          <Route exact path="/skaters" component={SearchSkater}/>
-          <Route exact path="/skaters/:id" component={SkaterProfile}/>
-          <Route exact path="/brands" component={BrandPage} />
-          <Route exact path="/brands/:id" component={BrandProfile} />
-          <Route exact path="/movietime" component={VideoPage} />
+          <Route exact path="/skater" component={SearchSkater}/>
+          <Route exact path="/brand" component={BrandPage} />
           <Route exact path="/profile" component={ProfilePage} />
+          <Route exact path="/videos" component={VideoPage} />
+          <Route exact path="/brand/:id" component={BrandProfile} />
+          <Route exact path="/contribute" component={ContributePage}/>
+          <Route exact path ="/skater/:id" component={SkaterProfile}/>
           <Route exact path ="/404" component={WrongPage}/>
           <Route exact path="/" component={Home}/>
           <Redirect to="/404"  />

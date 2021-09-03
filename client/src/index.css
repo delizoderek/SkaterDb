@@ -21,10 +21,15 @@ h6 {
 .searchBar{
   background-color: #8395a7;
 }
-.navbar{
+.bgColor{
   background-color: #5f27cd;
-  
 }
+
+.listHeight{
+  height: 250px;
+  overflow: scroll;
+}
+
 /* .homePage{
   background-color: #c8d6e5;
 } */
@@ -33,4 +38,8 @@ h6 {
   font-weight: 1000;
   font-size: 3rem;
   text-align: center;
+}
+
+#box-styling{
+  background-color: antiquewhite;
 }

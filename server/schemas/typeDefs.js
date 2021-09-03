@@ -13,7 +13,7 @@ const typeDefs = gql`
 
   type SkateVideo {
     _id:ID!
-    title: String!
+    title: String
     releaseDate: String
     vidLink: String
     skaters: [Skater]
@@ -23,6 +23,7 @@ const typeDefs = gql`
   type Brand {
     _id:ID!
     brandName: String!
+    logo: String
     description: String
     skateVideos: [SkateVideo]
   }

@@ -16,6 +16,10 @@ export const GET_SKATERS = gql`
       lastName
       pronouns
       stance
+      videos{
+        title
+        vidLink
+      }
     }
   }
 `;
@@ -23,27 +27,23 @@ export const GET_SKATERS = gql`
 export const GET_BRANDS = gql`
   query allBrands {
     brands {
+    _id
+    brandName
+    logo
+    description
+    skateVideos {
+      title
       _id
-      brandName
-      description
-      skateVideos {
-        _id
-        vidLink
-        skaters {
-        _id
-        firstName
-        lastName
-        pronouns
-        stance
-        }
-      }
+      releaseDate
+      vidLink
     }
   }
+  }
 `;
-      
+
 export const GET_VIDEOS = gql`
   query allVideos {
-    videos {
+    skateVideos {
       title
       releaseDate
       vidLink
@@ -62,6 +62,14 @@ export const GET_SINGLE_SKATER = gql`
       lastName
       pronouns
       stance
+      videos{
+        title
+        releaseDate
+        vidLink
+        brand
+        skaters
+        soundtrack
+      }
     }
   }
 `;

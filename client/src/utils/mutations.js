@@ -25,3 +25,15 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_VIDEO = gql`
+mutation AddVideoMutation($addVideoTitle: String!, $addVideoInput: VideoInput) {
+  addVideo(title: $addVideoTitle, input: $addVideoInput) {
+    _id
+    title
+    releaseDate
+    vidLink
+  }
+}
+`;
+
