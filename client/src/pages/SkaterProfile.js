@@ -1,12 +1,17 @@
 import React from 'react'
-import { Display } from '../components/Display'
-import { VideoCard } from '../components/profileCard'
+import {useParams} from 'react-router-dom'
+import Display, {VideoCard} from '../components/profileCard'
 
 const SkaterProfile = () => {
+    let {skaterId} = useParams()
+
+
     return (
         <div>
-            <Display />
-            <VideoCard />
+            {/* <VideoCard 
+                skaterId={id}
+            /> */}
+             {skaterId}
         </div>
     )
 }

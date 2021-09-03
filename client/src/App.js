@@ -41,6 +41,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+
 function App() {
   return (
     <Router>
@@ -53,8 +54,8 @@ function App() {
           <Route exact path="/videos" component={VideoPage} />
           <Route exact path="/brand/:id" component={BrandProfile} />
           <Route exact path="/contribute" component={ContributePage}/>
+          <Route exact path ="/skater/:id" component={SkaterProfile}/>
           <Route exact path ="/404" component={WrongPage}/>
-          <Route exact path ="/skater/id" component={SkaterProfile}/>
           <Route exact path="/" component={Home}/>
           
           <Redirect to="/404"  />
