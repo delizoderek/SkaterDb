@@ -4,11 +4,7 @@ import React from 'react';
 export function BrandCard(props) {
     const cardStyle = {
       width: '18rem',
-    };
-  
-    // Helper function that generates a random width for our placeholder images
-  
-  
+    };  
     return (
       <div>
         <div className="card" style={cardStyle}>

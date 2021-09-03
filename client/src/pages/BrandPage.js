@@ -72,4 +72,4 @@ const SearchBrand = () => {
   );
 };
 
-export default SearchBrand ;
+export default SearchBrand;
