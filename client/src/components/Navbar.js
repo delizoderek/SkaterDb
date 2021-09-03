@@ -10,6 +10,12 @@ const AppNavbar = () => {
   // set modal display state
   const [showModal, setShowModal] = useState(false);
 
+  const handleLogout = (e) => {
+    e.preventDefault();
+    Auth.logout();
+    window.location.reload();
+  }
+
   return (
     <>
     <div>
@@ -24,14 +30,13 @@ const AppNavbar = () => {
               <Nav.Link as={Link} to='/contribute'>
                 Contribute
               </Nav.Link>
-              
               {/* if user is logged in show saved skaters and logout */}
               {Auth.loggedIn() ? (
                 <>
                   <Nav.Link as={Link} to='/saved'>
                     Who's Skatin'?
                   </Nav.Link>
-                  <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
+                  <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
                 </>
               ) : (
                 <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>

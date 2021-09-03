@@ -1,0 +1,94 @@
+<Form
+        noValidate
+        validated={validated}
+        onSubmit={handleFormSubmit}
+        className="m-3 p-4 rounded"
+      >
+        <Alert
+          dismissible
+          onClose={() => setShowAlert(false)}
+          show={showAlert}
+          variant="danger"
+        >
+          You didn't enter any values
+        </Alert>
+        <Row>
+          <Col xs="auto">
+            <Form.Label htmlFor="inlineFormInput" visuallyHidden>
+              Name
+            </Form.Label>
+            <Form.Control
+              className="mb-2"
+              id="inlineFormInput"
+              placeholder="Jane Doe"
+            />
+          </Col>
+        </Row>
+        <Form.Group>
+          <Form.Label htmlFor="vidTitle">Video Title</Form.Label>
+          <Form.Control
+            type="text"
+            disabled={loading}
+            placeholder="Derek's Skate House"
+            name="vidTitle"
+            onChange={handleInputChange}
+            value={videoFormData.title}
+          />
+          <Form.Control.Feedback type="invalid">
+            Email is required!
+          </Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label htmlFor="releaseDate">Release Date</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="2019"
+            name="releaseDate"
+            onChange={handleInputChange}
+            value={videoFormData.releaseDate}
+          />
+          <Form.Control.Feedback type="invalid">
+            Password is required!
+          </Form.Control.Feedback>
+        </Form.Group>
+        <Button disabled={loading} variant="outline-secondary" type="submit">
+          Submit
+        </Button>
+      </Form>
+
+    // const [videoFormData, setvideoFormData] = useState({
+  //   actionType: "Default",
+  //   title: "",
+  // });
+  // const [validated] = useState(false);
+  // const [showAlert, setShowAlert] = useState(false);
+  // // const [login, { error, data }] = useMutation(LOGIN_USER);
+
+  // const { loading, error, data } = useQuery(GET_VIDWITHID);
+  // const handleInputChange = (event) => {
+  //   const { name, value } = event.target;
+  //   setvideoFormData({ ...videoFormData, [name]: value });
+  // };
+
+  // const handleFormSubmit = async (event) => {
+  //   event.preventDefault();
+
+  //   // check if form has everything (as per react-bootstrap docs)
+  //   const form = event.currentTarget;
+  //   if (form.checkValidity() === false) {
+  //     event.preventDefault();
+  //     event.stopPropagation();
+  //   }
+
+  //   try {
+  //     console.log(data);
+  //   } catch (err) {
+  //     setShowAlert(true);
+  //   }
+
+  //   setvideoFormData({
+  //     actionType: "Default",
+  //     title: "",
+  //   });
+  // };
