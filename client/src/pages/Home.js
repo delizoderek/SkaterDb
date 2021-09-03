@@ -40,9 +40,9 @@ function Home() {
       <div className= "d-flex flex-wrap">
       <Nav defaultActiveKey="/home" className="flex-column">
       <Nav.Link href="/">Home</Nav.Link>
-      <Nav.Link href="/brands">Video by Brand</Nav.Link>
-      <Nav.Link href="/skaters">Video by Skater</Nav.Link>
-      <Nav.Link href="/movietime">Theatre</Nav.Link>
+      <Nav.Link href="/brand">Video by Brand</Nav.Link>
+      <Nav.Link href="/skater">Video by Skater</Nav.Link>
+      <Nav.Link href="/videos">Theatre</Nav.Link>
     </Nav>
 
       <Carousel className="container" 
