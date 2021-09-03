@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { GET_SINGLE_BRAND } from "../utils/queries";
-import VideoPlayer from "../components/VideoPlayer";
+import {VideoCard} from "../components/profileCard";
 import { useQuery } from "@apollo/client";
 
 const BrandProfile = () => {
@@ -22,11 +22,11 @@ const BrandProfile = () => {
       <h1>{queryObj.loading?"Loading the brand's videos":skater.brandName}</h1>
       {queryObj.loading ? (
         <h1>loading</h1>
-      ) : (
-        skater.skateVideos.map((video, i) => (
-          <VideoPlayer key={i} link={video.vidLink} />
-        ))
-      )}
+      ) : (<div className="d-flex flex-wrap w-100">
+      {skater.skateVideos.map((video, i) => (
+        <VideoCard key={i} title={video.title} link={`/video/${video._id}`}/>
+      ))}</div>
+    )}
     </div>
     )
 }

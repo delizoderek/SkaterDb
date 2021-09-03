@@ -80,6 +80,7 @@ export const GET_SINGLE_SKATER = gql`
       pronouns
       stance
       videos{
+        _id
         title
         releaseDate
         vidLink
@@ -93,17 +94,18 @@ export const GET_SINGLE_SKATER = gql`
 
 export const GET_SINGLE_VIDEO = gql`
   query getSingleVideo($skateVideo: ID!) {
-    skateVideo(skateVideoId: $skateVideoId) {
+    skateVideo(_id: $skateVideo) {
       _id
       title
       releaseDate
       vidLink
-      brand
+      brands{
+        brandName
+      }
       skaters{
         firstName
         lastName
       }
-      soundTrack
     }
   }
 `;

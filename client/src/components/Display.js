@@ -1,6 +1,6 @@
 import React from 'react';
 import {useParams} from 'react-router-dom'
-import {Card, VideoCard, BrandCard} from './profileCard';
+import {InfoCard, VideoCard, BrandCard} from './profileCard';
 import { useQuery } from '@apollo/client';
 import { GET_SKATERS, GET_VIDEOS, GET_BRANDS } from '../utils/queries';
 
@@ -13,7 +13,7 @@ const skaters = data?.skaters || [];
   return (
     <div>
       {loading?<h1>loading</h1>:skaters.map((skater,i) => (
-        <Card name={skater.firstName +" " + skater.lastName} pronouns={skater.pronouns} key={i} skaterId={skater._id} stance={skater.stance} totalVideos={skater.videos} />
+        <InfoCard name={skater.firstName +" " + skater.lastName} />//pronouns={skater.pronouns} key={i} skaterId={skater._id} stance={skater.stance} totalVideos={skater.videos} />
       ))}
     </div>
   );

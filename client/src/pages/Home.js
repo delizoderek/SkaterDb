@@ -43,7 +43,7 @@ function Home() {
           <Nav.Link id="sidepanel" href="/">Home</Nav.Link>
           <Nav.Link id="sidepanel" href="/brand">Video by Brand</Nav.Link>
           <Nav.Link id="sidepanel" href="/skater">Video by Skater</Nav.Link>
-          <Nav.Link id="sidepanel" href="/videos">Theatre</Nav.Link>
+          {/*<Nav.Link id="sidepanel" to={`/videos`}>Theatre</Nav.Link>*/}
         </Nav>
 
         <Carousel className="container"
