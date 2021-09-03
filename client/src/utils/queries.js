@@ -66,9 +66,9 @@ export const GET_SINGLE_SKATER = gql`
         title
         releaseDate
         vidLink
-        brand
-        skaters
-        soundtrack
+        brands{
+          brandName
+        }
       }
     }
   }

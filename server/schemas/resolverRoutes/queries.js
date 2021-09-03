@@ -20,7 +20,6 @@ const Query = {
   },
   skater: async (parent, { _id }) => {
     const thisSkater = await Skater.findById(_id).populate('videos');
-    console.log(thisSkater);
     return thisSkater;
   },
   skateVideos: async () => {

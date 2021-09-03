@@ -67,7 +67,6 @@ const SearchSkater = () => {
       console.error(err);
     }
   };
-  
 
   return (
     <>

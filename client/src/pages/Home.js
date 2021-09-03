@@ -36,11 +36,10 @@ function Home() {
       {/* <Navbar />  */}
       {/* <LoginForm />
       <SignupForm /> */}
-      <h1>Welcome to Skater Hx, see the past and view the future of skating</h1>
       {/* <Display /> */}
       {/*} <VideoDisplay />*/}
       <div className="d-flex flex-wrap">
-        <Nav defaultActiveKey="/home" className="flex-column">
+        <Nav defaultActiveKey="/home" className="col-2 flex-column">
           <Nav.Link id="sidepanel" href="/">Home</Nav.Link>
           <Nav.Link id="sidepanel" href="/brand">Video by Brand</Nav.Link>
           <Nav.Link id="sidepanel" href="/skater">Video by Skater</Nav.Link>
