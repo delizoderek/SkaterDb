@@ -14,13 +14,9 @@ import ProfilePage from "./pages/ProfilePage";
 import Navbar from "./components/Navbar";
 import WrongPage from "./pages/WrongPage";
 import BrandPage from "./pages/BrandPage";
-<<<<<<< HEAD
-import SkaterProfile from "./pages/SkaterProfile";
-=======
 import BrandProfile from "./pages/BrandProfile";
 import VideoPage from "./pages/VideoPage";
 import ContributePage from "./pages/ContributePage";
->>>>>>> develop
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: "/graphql",

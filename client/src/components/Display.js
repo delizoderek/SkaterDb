@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/client';
 import { GET_SKATERS, GET_VIDEOS, GET_BRANDS } from '../utils/queries';
 
 
+
 export function Display() {
 const {loading, data} = useQuery(GET_SKATERS)
 const skaters = data?.skaters || [];
@@ -36,7 +37,7 @@ export function VideoDisplay() {
       return (
         <div>
           {loading?<h1>loading</h1>:brands.map((user) => (
-            <BrandCard name={user.brandName} description={user.description} key={user._id}  totalVideos={user.skateVideos} />
+            <BrandCard name={user.brandName} description={user.description} key={user._id}  totalVideos={user.skateVideos} url={user.skateVideos.vidLinks[0]}/>
           ))}
         </div>
       );
