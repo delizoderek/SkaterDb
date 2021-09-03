@@ -24,6 +24,12 @@ h6 {
 .bgColor{
   background-color: #5f27cd;
 }
+
+.listHeight{
+  height: 250px;
+  overflow: scroll;
+}
+
 /* .homePage{
   background-color: #c8d6e5;
 } */
