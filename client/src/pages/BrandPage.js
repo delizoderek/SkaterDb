@@ -1,9 +1,17 @@
-import React, {useState} from 'react';
-import { BrandCard} from '../components/profileCard';
-import { useQuery } from '@apollo/client';
-import { GET_BRANDS } from '../utils/queries';
-import { Jumbotron, Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
-import Auth from '../utils/auth';
+import React, { useState } from "react";
+import { BrandCard } from "../components/profileCard";
+import { useQuery } from "@apollo/client";
+import { GET_BRANDS } from "../utils/queries";
+import {
+  Jumbotron,
+  Container,
+  Col,
+  Form,
+  Button,
+  Card,
+  CardColumns,
+} from "react-bootstrap";
+import Auth from "../utils/auth";
 // const SearchBrand = () => {
 //   const [searchedBrand , setSearchedBrand ] = useState([]);
 //   // create state for holding our search field data
@@ -74,22 +82,15 @@ import Auth from '../utils/auth';
 
 // export default SearchBrand;
 
-
-
-
-
-
-
-
-
-
-
 const SearchBrand = () => {
   // create state for holding returned google api data
   // Needs to be changed for searching skaters
   const [searchedBrand, setSearchedBrand] = useState([]);
   // create state for holding our search field data
-  const [searchInput, setSearchInput] = useState('');
+  const [searchInput, setSearchInput] = useState("");
+
+  const queryObj = useQuery(GET_BRANDS);
+  // const brands = data?.brands || [];
 
   // create state to hold saved bookId values
   // const [savedBookIds, setSavedBookIds] = useState(getSavedBookIds());
@@ -109,8 +110,7 @@ const SearchBrand = () => {
     }
 
     try {
-
-      setSearchInput('');
+      setSearchInput("");
     } catch (err) {
       console.error(err);
     }
@@ -119,15 +119,15 @@ const SearchBrand = () => {
   // create function to handle saving a skater to our database
   const handleSaveSkater = async (brandId) => {
     // find the skater in `searchedSkater` state by the matching id
-    const brandToSave = searchedBrand.find((brand) => brand.brandId === brandId);
+    const brandToSave = searchedBrand.find(
+      (brand) => brand.brandId === brandId
+    );
     // get token
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
     if (!token) {
       return false;
     }
-
-
 
     try {
       console.log(brandToSave);
@@ -143,50 +143,39 @@ const SearchBrand = () => {
       console.error(err);
     }
   };
-  
+
+  console.log(queryObj);
 
   return (
     <>
       <Container>
-        <h2>
-          {searchedBrand.length
-            ? `Viewing ${searchedBrand.length} results:`
-            : 'Search for a brand'}
-        </h2>
         <CardColumns>
-          {searchedBrand.map((brand) => {
-            return (
-              <Card key={brand.brandId} border='dark'>
-                {brand.image ? (
-                  <Card.Img src={brand.image} alt={`${brand.firstName}`} variant='top' />
-                ) : null}
-                <Card.Body>
-                  <Card.Title>{brand.brandName}</Card.Title>
-                  {/* <p className='small'>Authors: {skater.authors}</p> */}
-                  <Card.Text>{brand.description}</Card.Text>
-                  {Auth.loggedIn() && (
-                    <Button
-                      // disabled={savedskaterIds?.some((savedskaterId) => savedskaterId === skater.skaterId)}
-                      className='btn-block btn-info'
-                      onClick={() => handleSaveSkater(brand.brandId)}>
-                      {/* {savedskaterIds?.some((savedskaterId) => savedskaterId === skater.skaterId)
-                        ? 'This skater has already been saved!'
-                        : 'Save this skater!'} */}
-                    </Button>
-                  )}
-                </Card.Body>
-              </Card>
-            );
-          })}
+          {queryObj.loading ? (
+            <h1>Hello World</h1>
+          ) : (
+            queryObj.data.brands.map((item,i) => {
+              {
+                  return (
+                    <Card key={i} border="dark">
+                      {item.logo ? (
+                        <Card.Img
+                          src={item.logo}
+                          alt={item.brandName}
+                          variant="top"
+                        />
+                      ) : ''}
+                      <Card.Body>
+                        <Card.Title>{item.brandName}</Card.Title>
+                        <p className="small">Videos:{item.skateVideos.length}</p>
+                        <Card.Text>{item.description}</Card.Text>
+                      </Card.Body>
+                    </Card>
+                  );
+              }
+            })
+          )}
         </CardColumns>
       </Container>
-          {/* <Alphabet /> */}
-          <Container>
-            <CardColumns>
-          <BrandCard className="flex-row" />
-          </CardColumns>
-        
-          </Container>
     </>
   );
 };

@@ -2,7 +2,7 @@ import React, {useState}  from 'react'
 import Tabs from './Tabs';
 import BrandForm from './BrandForm';
 import SkaterForm from './SkaterForm';
-import {VideoForm} from './VideoForm';
+import VideoForm from './VideoForm';
 
 
 function FormContainer() {

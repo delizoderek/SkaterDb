@@ -23,6 +23,7 @@ const typeDefs = gql`
   type Brand {
     _id:ID!
     brandName: String!
+    logo: String
     description: String
     skateVideos: [SkateVideo]
   }
