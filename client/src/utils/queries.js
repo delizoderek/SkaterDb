@@ -56,7 +56,7 @@ export const GET_VIDEOS = gql`
 
 export const GET_SINGLE_SKATER = gql`
   query getSingleSkater($skaterId: ID!) {
-    skater(skaterId: $skaterId) {
+    skater(_id: $skaterId) {
       _id
       firstName
       lastName
