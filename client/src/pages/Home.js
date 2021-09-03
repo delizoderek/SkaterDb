@@ -3,6 +3,8 @@ import { Container } from "react-bootstrap";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { useQuery } from '@apollo/client';
+import VideoPlayer from '../components/VideoPlayer';
+
 import { Button, Navbar, Nav, NavItem, NavDropdown, MenuItem,menuVariant } from 'react-bootstrap';
 // import Display, { VideoDisplay } from '../components/Display'
 // import LoginForm from '../components/LoginForm';
@@ -64,11 +66,11 @@ function Home() {
         itemClass="carousel-item-padding-40-px"
       >
         <div>
-          <img src="https://www.placecage.com/gif/200/300"></img>
+        <VideoPlayer link = {"https://vimeo.com/4753710"} />
           </div>
-        <div><img src="https://www.placecage.com/c/200/300"></img></div>
-        <div><img src="https://www.placecage.com/200/300"></img></div>
-        <div><img src="https://www.placecage.com/g/200/300"></img></div>
+        <div><VideoPlayer link = {"https://vimeo.com/261051184"} /></div>
+        <div><VideoPlayer link = {"https://vimeo.com/261052965"} /></div>
+        <div><VideoPlayer link = {"https://youtu.be/Qp_vOLB-OUE"} /></div>
       </Carousel>
       </div>
       <Container>
