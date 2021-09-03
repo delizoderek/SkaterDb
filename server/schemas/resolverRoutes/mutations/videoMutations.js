@@ -2,20 +2,18 @@ const {Brand,Skater,SkateVideo} = require('../../../models');
 
 const videoMutations = {
     addVideo: async (parent,{title, input}) => {
-
         try {
             const createdVideo = await SkateVideo.create({title,...input});
-            const newVideo = {title};
-            newVideo.releaseDate = input.releaseDate || "";
+
             if(input.brands){
-                for(let brandId of brands){
-                    await Brand.findByIdAndUpdate(brandId,{$addToSet:{skateVideos: videoId}});
+                for(let brandId of input.brands){
+                    await Brand.findByIdAndUpdate(brandId,{$addToSet:{skateVideos: createdVideo._id}});
                 }
             }
 
             if(input.skaters){
-                for(let skaterId of skaters){
-                    await Skater.findByIdAndUpdate(skaterId,{$addToSet:{videos: videoId}});
+                for(let skaterId of input.skaters){
+                    await Skater.findByIdAndUpdate(skaterId,{$addToSet:{videos: createdVideo._id}});
                 }
             }
 

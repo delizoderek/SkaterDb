@@ -17,18 +17,24 @@ import {
   GET_SKATERWITHID,
 } from "./formQueries";
 
-import 
+import {ADD_VIDEO} from '../../utils/mutations';
 
 export default function VideoForm() {
-  const [videoData, setVideoData] = useState({});
+  const [videoData, setVideoData] = useState({title:'',releaseDate:'',videoCover:'',vidLink:''});
   const [brandList, setBrandList] = useState([]);
-  const [videoList, setVideoList] = useState([]);
+  const [skaterList, setSkaterList] = useState([]);
   const [soundtrackList, setSoundtrackList] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [modalProps, setModalProps] = useState({ title: "", list: [] });
+  const [addVideo,{error,data}] = useMutation(ADD_VIDEO);
   const skaterQuery = useQuery(GET_SKATERWITHID);
   const brandQuery = useQuery(GET_BRANDWITHID);
   const loading = brandQuery.loading && skaterQuery.loading;
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setVideoData({ ...videoData, [name]: value });
+  };
 
   const handleBrandClick = (e) => {
     e.preventDefault();
@@ -62,12 +68,12 @@ export default function VideoForm() {
     setSoundtrackList(["Text", ...soundtrackList]);
   };
 
-  const handleCheckbox = (event) => {
+  const handleItemSelect = (event) => {
     event.stopPropagation();
     event.preventDefault();
-    
+
     if(modalProps.title === 'Skaters'){
-      setVideoList([{id:event.target.id,title: event.target.textContent}, ...videoList]);
+      setSkaterList([{id:event.target.id,title: event.target.textContent}, ...skaterList]);
     } else if (modalProps.title === 'Brands'){
       setBrandList([{id:event.target.id,title: event.target.textContent}, ...brandList]);
     } else {
@@ -77,10 +83,33 @@ export default function VideoForm() {
     setShowModal(false);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.stopPropagation();
     event.preventDefault();
-
+    const {title,releaseDate,videoCover,vidLink} = videoData;
+    console.log(title);
+    try {
+      const newVideo = await addVideo({
+        variables:{
+          addVideoTitle: title,
+          addVideoInput: {
+            releaseDate,
+            videoCover,
+            vidLink,
+            brands: brandList.map(item => item.id),
+            skaters: skaterList.map(item => item.id),
+            soundtrack:[],
+          }
+        }
+      });
+      console.log(newVideo);
+    } catch (error) {
+      console.log(error);
+    }
+    // setVideoData({title:'',releaseDate:'',videoCover:'',vidLink:''});
+    // setSkaterList([]);
+    // setBrandList([]);
+    // setSoundtrackList([]);
   }
 
 
@@ -96,7 +125,7 @@ export default function VideoForm() {
           </select>
         </Col>
         <Col lg={2}>
-          <Button disabled={loading} variant="outline-secondary" type="submit">
+          <Button disabled={loading} variant="outline-secondary" type="submit" onClick={handleSubmit}>
             Submit
           </Button>
         </Col>
@@ -104,21 +133,21 @@ export default function VideoForm() {
       <Row className="mt-3">
         <Col lg={5}>
           <Form.Label>Video Title</Form.Label>
-          <Form.Control placeholder="Derek's Skate Palace" />
+          <Form.Control placeholder="Derek's Skate Palace" name="title" value={videoData.title} onChange={handleInputChange}/>
         </Col>
         <Col lg={5}>
           <Form.Label>Link to Cover Image</Form.Label>
-          <Form.Control placeholder="https://derpicdn.net/img/2012/11/26/163895/large.png" />
+          <Form.Control placeholder="https://derpicdn.net/img/2012/11/26/163895/large.png" name="videoCover" value={videoData.videoCover} onChange={handleInputChange}/>
         </Col>
       </Row>
       <Row className="mt-4">
         <Col lg={5}>
           <Form.Label>Link to Video</Form.Label>
-          <Form.Control placeholder="https://youtu.be/rEkt8VDfoTI" />
+          <Form.Control placeholder="https://youtu.be/rEkt8VDfoTI" name="vidLink" value={videoData.vidLink} onChange={handleInputChange}/>
         </Col>
         <Col lg={3}>
           <Form.Label>Release Date</Form.Label>
-          <Form.Control placeholder="2019" />
+          <Form.Control placeholder="2019" name="releaseDate" value={videoData.releaseDate} onChange={handleInputChange}/>
         </Col>
       </Row>
       <Row className="d-flex justify-content-around mt-3">
@@ -149,7 +178,7 @@ export default function VideoForm() {
             +
           </Button>
           <ListGroup className="listHeight">
-            {videoList.map((item, i) => {
+            {skaterList.map((item, i) => {
               return <ListGroup.Item key={i}>{item.title}</ListGroup.Item>;
             })}
           </ListGroup>
@@ -180,7 +209,7 @@ export default function VideoForm() {
           <div className="listHeight">
             <ListGroup className="listHeight">
               {modalProps.list.map((item, i) => {
-                return <ListGroup.Item key={i} id={item._id} onClick={handleCheckbox} className="btn btn-outline-secondary">{`${item.title}`}</ListGroup.Item>;
+                return <ListGroup.Item key={i} id={item._id} onClick={handleItemSelect} className="btn btn-outline-secondary">{`${item.title}`}</ListGroup.Item>;
               })}
             </ListGroup>
           </div>
