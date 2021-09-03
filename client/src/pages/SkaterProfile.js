@@ -1,14 +1,27 @@
-import React from 'react'
-import { Display } from '../components/Display'
-import { VideoCard } from '../components/profileCard'
+import React, {useState, useEffect} from 'react'
+import {useParams, Link} from 'react-router-dom'
+import { GET_SINGLE_SKATER } from '../utils/queries'
+import VideoPlayer from '../components/VideoPlayer'
+import { useQuery } from '@apollo/client'
 
-const SkaterProfile = () => {
-    return (
+function SkaterProfile () {
+
+    const {skaterId} = useParams();
+    
+    const [currentSkater, setCurrentSkater] = useState({});
+
+    const {loading, data} = useQuery(GET_SINGLE_SKATER);
+
+
+    const skater = data?.skater || [];
+
+    return(
         <div>
-            <Display />
-            <VideoCard />
+        <h1>hi this is working</h1>
+        {loading?<h1>loading</h1>:skater.map((skater, i) => ( 
+        < VideoPlayer key={i} link={skater.videos.vidLink}/>))}
+        <Link to="/skater">Back To Skaters</Link>
         </div>
-    )
+    );
 }
-
 export default SkaterProfile

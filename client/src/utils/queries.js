@@ -32,6 +32,7 @@ export const GET_BRANDS = gql`
       description
       skateVideos {
         _id
+        title
         vidLink
         skaters {
         _id
@@ -44,7 +45,7 @@ export const GET_BRANDS = gql`
     }
   }
 `;
-      
+
 export const GET_VIDEOS = gql`
   query allVideos {
     skateVideos {
@@ -66,6 +67,14 @@ export const GET_SINGLE_SKATER = gql`
       lastName
       pronouns
       stance
+      videos{
+        title
+        releaseDate
+        vidLink
+        brand
+        skaters
+        soundtrack
+      }
     }
   }
 `;
