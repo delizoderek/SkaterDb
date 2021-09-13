@@ -6,7 +6,14 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+} from "react-router-dom";
+import { StoreProvider } from "./utils/GlobalState";
 import Home from "./pages/Home";
 import SkaterList from "./pages/SkaterList";
 import ProfilePage from "./pages/ProfilePage";
@@ -41,24 +48,25 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-
 function App() {
   return (
     <Router>
       <ApolloProvider client={client}>
-        <Navbar />
-        <Switch>
-          <Route exact path="/skater" component={SkaterList}/>
-          <Route exact path="/brand" component={BrandPage} />
-          <Route exact path="/profile" component={ProfilePage} />
-          <Route exact path="/video/:id" component={VideoPage} />
-          <Route exact path="/brand/:id" component={BrandProfile} />
-          <Route exact path="/contribute" component={ContributePage}/>
-          <Route exact path ="/skater/:id" component={SkaterProfile}/>
-          <Route exact path ="/404" component={WrongPage}/>
-          <Route exact path="/" component={Home}/>
-          <Redirect to="/404"  />
-        </Switch>
+        <StoreProvider>
+          <Navbar />
+          <Switch>
+            <Route exact path="/skater" component={SkaterList} />
+            <Route exact path="/brand" component={BrandPage} />
+            <Route exact path="/profile" component={ProfilePage} />
+            <Route exact path="/video/:id" component={VideoPage} />
+            <Route exact path="/brand/:id" component={BrandProfile} />
+            <Route exact path="/contribute" component={ContributePage} />
+            <Route exact path="/skater/:id" component={SkaterProfile} />
+            <Route exact path="/404" component={WrongPage} />
+            <Route exact path="/" component={Home} />
+            <Redirect to="/404" />
+          </Switch>
+        </StoreProvider>
       </ApolloProvider>
     </Router>
   );
